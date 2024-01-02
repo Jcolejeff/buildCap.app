@@ -189,16 +189,16 @@ const AppNav = () => {
         </div>
         <div className='flex  w-full items-center justify-between px-container-base py-[.875rem] md:hidden '>
           <div
-            onClick={() => navigate(`/`)}
+            // onClick={() => navigate(`/`)}
             className='flex cursor-pointer items-center gap-[0.625rem]'
           >
             <div className='flex items-center '>
-              <img src={logo} alt='' className='w-6' />
+              <img src='/fav.png' alt='' className='w-[20px] md:w-[25px]' />
             </div>
             <h4
-              className={`text-[14px] font-[700] leading-[20px] tracking-[0.15px] text-primary-8 duration-300 md:text-[19px] md:font-[700]  md:leading-[24px]`}
+              className={`text-[14px] font-[900] leading-[20px] tracking-[0.15px] text-primary-8 duration-300 md:text-[19px] md:font-[700]  md:leading-[24px]`}
             >
-              App Assistant
+              buildCAP
             </h4>
           </div>
 

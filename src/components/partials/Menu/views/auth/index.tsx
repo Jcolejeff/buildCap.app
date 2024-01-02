@@ -21,7 +21,7 @@ const AuthMenu = ({ close }: { close: () => void }) => {
   return (
     <div className='flex h-full w-full flex-col gap-[2.125rem]'>
       <div
-        onClick={() => navigate(`/${CONSTANTS.ROUTES['my-assistants']}`)}
+        onClick={() => navigate(`/${CONSTANTS.ROUTES['dashboard']}`)}
         className={`group flex cursor-pointer items-center  gap-[0.625rem] rounded-[8px] p-4  transition-all duration-300
          ease-in-out hover:bg-primary-6 hover:text-primary-1
          ${isAllowed(`student`) ? `text-secondary-9` : `text-secondary-13`}
@@ -46,7 +46,7 @@ const AuthMenu = ({ close }: { close: () => void }) => {
             }}
           />
         )}
-        <span className='text-[16px] font-[400] leading-[20px]'> Back to your assistants</span>
+        <span className='text-[16px] font-[400] leading-[20px]'>Overview</span>
       </div>
       <div className='flex flex-col'>
         {sideNavLinks['discussions']?.map((i, idx) => (

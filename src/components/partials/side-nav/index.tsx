@@ -17,7 +17,11 @@ type ISideNavTitles =
   | 'Advertise a Service'
   | 'Online Training'
   | 'Master Classes'
-  | 'Bi-annual Bootcamps';
+  | 'Bi-annual Bootcamps'
+  | 'Settings'
+  | 'Users'
+  | 'Payment Plans'
+  | 'Projects';
 
 interface extendedRouteInterface extends ItitleLinks<ISideNavTitles, routePathTypes> {
   icons: JSX.Element;
@@ -32,7 +36,7 @@ export const sideNavLinks: ISideNavLinks = {
   discussions: [
     {
       link: 'customize-your-avatar',
-      title: 'Customize Avatar',
+      title: 'Projects',
       icons: (
         <Icon
           svgProp={{
@@ -46,7 +50,7 @@ export const sideNavLinks: ISideNavLinks = {
     },
     {
       link: 'view-pages',
-      title: 'View Pages',
+      title: 'Payment Plans',
       icons: (
         <Icon
           name='gForumIcon'
@@ -60,7 +64,7 @@ export const sideNavLinks: ISideNavLinks = {
     },
     {
       link: 'deploy-assistant',
-      title: 'Deploy Assistant',
+      title: 'Users',
       icons: (
         <Icon
           svgProp={{
@@ -76,7 +80,7 @@ export const sideNavLinks: ISideNavLinks = {
   features: [
     {
       link: 'settings',
-      title: 'Assistant Settings',
+      title: 'Settings',
       icons: (
         <Icon
           svgProp={{
@@ -127,7 +131,7 @@ const SideNav = () => {
       />
       <div className=' pb-[2.5rem]'>
         <div
-          onClick={() => navigate(`/`)}
+          // onClick={() => navigate(`/`)}
           className='flex cursor-pointer items-center gap-[0.625rem] px-[2rem]'
         >
           <div className='flex  items-center gap-2'>
@@ -153,12 +157,12 @@ const SideNav = () => {
       <div className='no-scrollbar flex flex-grow flex-col gap-[1.125rem] overflow-y-auto overflow-x-hidden'>
         <div className='px-4 '>
           <div
-            onClick={() => navigate(`/${CONSTANTS.ROUTES['my-assistants']}`)}
+            onClick={() => navigate(`/${CONSTANTS.ROUTES['dashboard']}`)}
             className={`flex items-center gap-[0.625rem] px-4 py-[0.625rem] hover:bg-primary-light 
             ${
               isAllowed(`student`) ? `text-secondary-9` : `text-secondary-13`
             } hover:text-primary-1 ${
-              location?.pathname === `/${CONSTANTS.ROUTES['my-assistants']}`
+              location?.pathname === `/${CONSTANTS.ROUTES['dashboard']}`
                 ? `bg-primary-1 !text-white/95`
                 : ``
             }
@@ -188,7 +192,7 @@ const SideNav = () => {
           ${navOpen ? `opacity-100` : `scale-0 opacity-0`}
           duration-300`}
             >
-              Back to your assistants
+              Overview
             </h6>
           </div>
         </div>

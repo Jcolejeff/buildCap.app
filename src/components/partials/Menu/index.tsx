@@ -27,29 +27,29 @@ const Menu = () => {
       {createPortal(
         <>
           <div
-            className={`fixed bottom-0 left-0 right-0 top-0 h-screen w-full overflow-hidden bg-black/[0.25] ${
+            className={`fixed bottom-0 left-0  right-0 top-0 h-screen w-full overflow-hidden bg-black/[0.25] ${
               menuOpen ? `opacity-100` : `hidden opacity-0`
             } transition-all duration-300 delay-200 ease-in-out`}
           ></div>
           <aside
             ref={menuRef}
-            className={`fixed bottom-0 right-0 top-0 z-20 h-screen w-[320px] bg-white ${
+            className={`fixed bottom-0 right-0 top-0 z-50 h-screen w-[320px] bg-white ${
               menuOpen ? `translate-x-0` : `translate-x-[100%]`
             } transition-transform duration-300 delay-300 ease-in-out `}
           >
-            <div className='flex h-full  w-full flex-col px-[1.5rem] py-[1.875rem] '>
-              <div className='flex w-full justify-between border-b-2 border-extraColor-borderBottom-2 pb-[1.875rem]'>
+            <div className='flex h-full  w-full flex-col px-[1.5rem] py-[1.875rem] pt-6 '>
+              <div className='-[1.875rem] flex w-full justify-end  border-extraColor-borderBottom-2'>
+                {/* <button>
+                  <Icon name='notificationIcon' />
+                </button> */}
                 <button
                   className='group relative flex items-center'
                   onClick={() => setMenuOpen(false)}
                 >
                   <Hamburger menuOpen={menuOpen} />
                 </button>
-                <button>
-                  <Icon name='notificationIcon' />
-                </button>
               </div>
-              <div className='flex flex-grow flex-col overflow-y-auto overflow-x-hidden py-[2.5rem]'>
+              <div className='flex flex-grow flex-col overflow-y-auto overflow-x-hidden pb-[2.5rem]'>
                 <AuthMenu close={() => setMenuOpen(false)} />
               </div>
             </div>

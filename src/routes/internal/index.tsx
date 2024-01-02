@@ -12,6 +12,10 @@ import { routeTypes, routesInterface } from 'types';
 
 const internalRoute: routeTypes = [
   {
+    element: <CreateAssistantPage />,
+    path: 'dashboard',
+  },
+  {
     element: <CustomizeYourAvatar />,
     path: 'customize-your-avatar',
   },
