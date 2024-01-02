@@ -1,6 +1,6 @@
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import rocketBoy from 'assets/image/rocketBoy.png?format=webp&w=700&h=669.86&imagetools';
-import choice from 'assets/svg/choice.svg?ormat=webp&w=700&h=669.86&imagetools';
+import choice from 'assets/image/sign.jpg?ormat=webp&w=700&h=669.86&imagetools';
 import Icon from 'utils/Icon';
 import { useNavigate } from 'react-router-dom';
 import { Input } from 'components/shadcn/input';
@@ -102,8 +102,8 @@ const SignUp = () => {
 
   return (
     <div className='flex h-full w-full items-center'>
-      <div className='hidden h-full w-1/2 basis-auto items-center justify-center overflow-hidden   bg-primary-15 px-16 md:flex'>
-        <div className=' transition-all duration-300 ease-in-out'>
+      <div className='hidden h-full w-1/2 basis-auto items-center justify-center overflow-hidden   bg-primary-15 md:flex'>
+        <div className='h-full w-full  transition-all duration-300 ease-in-out'>
           <LazyLoadImage
             className='h-full w-full bg-current object-cover'
             src={choice}
@@ -119,17 +119,14 @@ const SignUp = () => {
              items-center gap-2'
             onClick={() => navigate(`/`)}
           >
-            <Icon name='nfmLogo' svgProp={{ width: 30, height: 40 }} />{' '}
-            <h4 className='whitespace-nowrap text-[20px] font-[700]  leading-[24px] tracking-[0.15px] text-primary-9/[0.87] md:text-[19px]'>
-              App Assistant
-            </h4>
+            <Icon name='nfmLogo' svgProp={{ className: 'w-[80px] md:w-[120px]' }} />{' '}
           </div>
           <div className='mb-[1.5rem] flex w-full flex-col'>
             <h5 className='font-inter text-[17px] font-[700] leading-[32px] tracking-[0.18px] text-primary-9/[0.87]'>
               Create an Account! 🚀
             </h5>
             <p className='leading-[24px] tracking-[0.15px] text-primary-9/[0.60]'>
-              Make your your app assistant account to get started
+              Make your buildCAP account to get started
             </p>
           </div>
           <form
@@ -177,7 +174,7 @@ const SignUp = () => {
                 htmlFor='Remember Me'
                 className='text-[14px] leading-[21px] tracking-[0.15px] text-primary-9/[0.38]'
               >
-                I agree to the App Assistant{''}
+                I agree to buildCAP{''}
                 <span
                   // onClick={() => navigate(`/${CONSTANTS.ROUTES['privacy-policy']}`)}
                   className='cursor-pointer text-primary-1 hover:underline'

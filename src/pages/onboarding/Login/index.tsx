@@ -1,6 +1,6 @@
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import rocketBoy from 'assets/image/rocketBoy.png?format=webp&w=700&h=669.86&imagetools';
-import loginIcon from 'assets/svg/login.svg?format=webp&w=700&h=669.86&imagetools';
+import loginIcon from 'assets/image/login.jpg?format=webp&w=700&h=669.86&imagetools';
 import Icon from 'utils/Icon';
 import { useNavigate, useSearchParams } from 'react-router-dom';
 import { Input } from 'components/shadcn/input';
@@ -97,8 +97,8 @@ const Login = () => {
           </div>
         </DialogContent>
       </Dialog>
-      <div className='hidden h-full w-1/2 basis-auto items-center justify-center overflow-hidden   bg-primary-15 px-16 md:flex'>
-        <div className=' transition-all duration-300 ease-in-out'>
+      <div className='hidden h-full w-1/2 basis-auto items-center justify-center overflow-hidden   bg-primary-15 md:flex'>
+        <div className='h-full w-full  transition-all duration-300 ease-in-out'>
           <LazyLoadImage
             className='h-full w-full bg-current object-cover'
             src={loginIcon}
@@ -114,15 +114,9 @@ const Login = () => {
              items-center gap-2'
             onClick={() => navigate(`/`)}
           >
-            <Icon name='nfmLogo' svgProp={{ width: 30, height: 40 }} />{' '}
-            <h4 className='whitespace-nowrap text-[20px] font-[700]  leading-[24px] tracking-[0.15px] text-primary-9/[0.87] md:text-[19px]'>
-              App Assistant
-            </h4>
+            <Icon name='nfmLogo' svgProp={{ className: 'w-[80px] md:w-[120px]' }} />{' '}
           </div>
           <div className='mb-[1.5rem] flex w-full flex-col'>
-            <h5 className='font-inter text-[17px] font-[700] leading-[32px] tracking-[0.18px] text-primary-9/[0.87]'>
-              Welcome! 👋🏻
-            </h5>
             <p className='leading-[24px] tracking-[0.15px] text-primary-9/[0.60]'>
               Please login to your account
             </p>
