@@ -1,33 +1,37 @@
 import CONSTANTS from 'constant';
-import CustomizeYourAvatar from 'pages/app/customize-your-avatar';
-import ViewPages from 'pages/app/view-pages';
-import DeployAssistant from 'pages/app/deploy-assistant';
+import Projects from 'pages/app/projects';
+import PaymentPlans from 'pages/app/payment-plans';
+import UserList from 'pages/app/user-list';
 import Profile from 'pages/app/user-profile';
 import AccountSettings from 'pages/app/account-settings';
 import SingleAssistantPage from 'pages/inner-pages/single-assistant-page';
-import CreateAssistantPage from 'pages/app/create-assistant';
+import Dashboard from 'pages/app/dashboard';
 import SingleWorkflowPage from 'pages/inner-pages/single-workflow';
 
 import { routeTypes, routesInterface } from 'types';
 
 const internalRoute: routeTypes = [
   {
-    element: <CreateAssistantPage />,
+    element: <Dashboard />,
+    path: '',
+  },
+  {
+    element: <Dashboard />,
     path: 'dashboard',
   },
   {
-    element: <CustomizeYourAvatar />,
-    path: 'customize-your-avatar',
+    element: <Projects />,
+    path: 'projects',
   },
 
   {
-    element: <ViewPages />,
-    path: 'view-pages',
+    element: <PaymentPlans />,
+    path: 'payment-plans',
   },
 
   {
-    element: <DeployAssistant />,
-    path: 'deploy-assistant',
+    element: <UserList />,
+    path: 'users-list',
   },
 
   {
@@ -43,9 +47,9 @@ const internalRoute: routeTypes = [
 export const innerInternalRoutes: routesInterface<string>[] = [
   {
     element: <SingleWorkflowPage />,
-    path: `${CONSTANTS.ROUTES['view-pages']}/workflow/:workflowId`,
+    path: `${CONSTANTS.ROUTES['payment-plans']}/workflow/:workflowId`,
   },
-  { element: <SingleAssistantPage />, path: `${CONSTANTS.ROUTES['view-pages']}/:pageId` },
+  { element: <SingleAssistantPage />, path: `${CONSTANTS.ROUTES['payment-plans']}/:pageId` },
 ];
 
 export default internalRoute;

@@ -35,8 +35,10 @@ const CustomizeYourAvatarPage = () => {
   // });
 
   return (
-    <div className='container flex h-full  w-full flex-col px-container-base py-[1.875rem] '>
-      <section className='container  bg-white px-container-base'>
+    <div className='container   w-full  px-container-base py-[1.875rem] '>
+      <FunkyPagesHero description='list of your active and inactive projects' title='Projects' />
+
+      {/* <section className='container  bg-white px-container-base'>
         <article className='mb-12 mt-7 flex items-center justify-between'>
           <div>
             <p className='font-bold md:text-[19px] '>Customize your Avatar</p>
@@ -69,7 +71,7 @@ const CustomizeYourAvatarPage = () => {
             </div>
           </div>
         </FeaturedLoader>
-      </section>
+      </section> */}
     </div>
   );
 };

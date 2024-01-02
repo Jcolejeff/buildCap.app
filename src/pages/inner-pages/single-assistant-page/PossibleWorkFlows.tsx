@@ -55,7 +55,7 @@ export function PossibleWorkFlows() {
             <section className='grid gap-[1rem] rounded-lg md:grid-cols-[1fr_1fr_1fr]'>
               {sections.map((item, index) => {
                 return (
-                  <Link to={`/${CONSTANTS.ROUTES['view-pages']}/workflow/83899`}>
+                  <Link to={`/${CONSTANTS.ROUTES['payment-plans']}/workflow/83899`}>
                     <article className=' rounded-lg border-[2.5px] px-5 py-5' key={index}>
                       <div className='flex  items-center gap-4 '>
                         <p>{index + 1}</p>

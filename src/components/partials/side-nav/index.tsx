@@ -35,7 +35,7 @@ interface ISideNavLinks {
 export const sideNavLinks: ISideNavLinks = {
   discussions: [
     {
-      link: 'customize-your-avatar',
+      link: 'projects',
       title: 'Projects',
       icons: (
         <Icon
@@ -49,7 +49,7 @@ export const sideNavLinks: ISideNavLinks = {
       ),
     },
     {
-      link: 'view-pages',
+      link: 'payment-plans',
       title: 'Payment Plans',
       icons: (
         <Icon
@@ -63,7 +63,7 @@ export const sideNavLinks: ISideNavLinks = {
       ),
     },
     {
-      link: 'deploy-assistant',
+      link: 'users-list',
       title: 'Users',
       icons: (
         <Icon

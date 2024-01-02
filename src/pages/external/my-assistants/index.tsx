@@ -80,7 +80,7 @@ const AllAssistantsPage = () => {
                     date={formatDate(i?.last_updated)}
                     description={i?.subtitle}
                     title={i?.name}
-                    link={`/view-pages?app_id=${i?.id}`}
+                    link={`/payment-plans?app_id=${i?.id}`}
                   />
                 </div>
               ))}
@@ -95,7 +95,7 @@ const AllAssistantsPage = () => {
                     date={formatDate(i?.last_updated)}
                     description={i?.subtitle}
                     title={i?.name}
-                    link={`/view-pages?app_id=${i?.id}`}
+                    link={`/payment-plans?app_id=${i?.id}`}
                   />
                 </div>
               ))} */}

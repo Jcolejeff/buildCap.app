@@ -49,7 +49,7 @@ const Login = () => {
     onSuccess: (data) => {
       setAuthDetails(data);
       setLoggedIn(true);
-      navigate(`/${CONSTANTS.ROUTES['my-assistants']}`);
+      navigate(`/${CONSTANTS.ROUTES['dashboard']}`);
     },
     onError: (err) => {
       processError(err);
@@ -57,7 +57,8 @@ const Login = () => {
   });
 
   const onSubmit: SubmitHandler<customerLoginFormInterface> = (data) => {
-    mutate(data);
+    // mutate(data);
+    navigate(`/${CONSTANTS.ROUTES['dashboard']}`);
   };
 
   useEffect(() => {

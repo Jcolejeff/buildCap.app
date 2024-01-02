@@ -87,7 +87,7 @@ function AllPagesTable({ pages, refetch }: { pages: any; refetch: any }) {
       id: 'select',
       header: 'S/N',
       cell: ({ row }) => (
-        <Link to={`/${CONSTANTS.ROUTES['view-pages']}/${row.original.id}`}>
+        <Link to={`/${CONSTANTS.ROUTES['payment-plans']}/${row.original.id}`}>
           <div className='capitalize'>{row.index + 1}</div>
         </Link>
       ),
@@ -110,7 +110,7 @@ function AllPagesTable({ pages, refetch }: { pages: any; refetch: any }) {
         );
       },
       cell: ({ row }) => (
-        <Link to={`/${CONSTANTS.ROUTES['view-pages']}/${row.original.id}`}>
+        <Link to={`/${CONSTANTS.ROUTES['payment-plans']}/${row.original.id}`}>
           <div className='capitalize'>{row.getValue('title')}</div>
         </Link>
       ),
@@ -130,7 +130,7 @@ function AllPagesTable({ pages, refetch }: { pages: any; refetch: any }) {
         );
       },
       cell: ({ row }) => (
-        <Link to={`/${CONSTANTS.ROUTES['view-pages']}/${row.original.id}`}>
+        <Link to={`/${CONSTANTS.ROUTES['payment-plans']}/${row.original.id}`}>
           <div className='lowercase'>{row.getValue('url')}</div>
         </Link>
       ),
@@ -140,7 +140,7 @@ function AllPagesTable({ pages, refetch }: { pages: any; refetch: any }) {
       header: () => <div className='text-right'>Page Type</div>,
       cell: ({ row }) => {
         return (
-          <Link to={`/${CONSTANTS.ROUTES['view-pages']}/${row.original.id}`}>
+          <Link to={`/${CONSTANTS.ROUTES['payment-plans']}/${row.original.id}`}>
             <div className='text-right font-medium'>{row.getValue('type')}</div>
           </Link>
         );
@@ -163,7 +163,7 @@ function AllPagesTable({ pages, refetch }: { pages: any; refetch: any }) {
             <DropdownMenuContent align='end' className='px-4 py-2'>
               <DropdownMenuLabel>Actions</DropdownMenuLabel>
               <DropdownMenuItem
-                onClick={() => navigate(`/${CONSTANTS.ROUTES['view-pages']}/${page.id}`)}
+                onClick={() => navigate(`/${CONSTANTS.ROUTES['payment-plans']}/${page.id}`)}
                 className='flex items-center gap-2'
               >
                 <Icon name='editPen' svgProp={{ className: 'text-black' }}></Icon>
@@ -282,7 +282,7 @@ function AllPagesTable({ pages, refetch }: { pages: any; refetch: any }) {
                 >
                   {row.getVisibleCells().map((cell) => (
                     <TableCell key={cell.id}>
-                      {/* <Link to={`/${CONSTANTS.ROUTES['view-pages']}/${cell.id}`}> */}
+                      {/* <Link to={`/${CONSTANTS.ROUTES['payment-plans']}/${cell.id}`}> */}
                       {flexRender(cell.column.columnDef.cell, cell.getContext())}
                       {/* </Link> */}
                     </TableCell>

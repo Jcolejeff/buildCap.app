@@ -18,7 +18,7 @@ import TextContentLoader from 'components/Loaders/TextContentLoader';
 import { is } from 'date-fns/locale';
 import { set } from 'date-fns';
 
-const ViewAllPages = () => {
+const PaymentPlans = () => {
   const location = useLocation();
   const searchParams = new URLSearchParams(location.search);
   const app_id = searchParams.get('app_id');
@@ -63,11 +63,11 @@ const ViewAllPages = () => {
 
   return (
     <div className='container flex w-full flex-col px-container-base py-[1.875rem]'>
-      {/* <FunkyPagesHero
-        description='   Below is a list of all the pages we found on your website'
-        title='List of Pages'
-      /> */}
-      <article className='mb-12 mt-7 flex items-center justify-between'>
+      <FunkyPagesHero
+        description='Create and manage your payment plans here.'
+        title='Payment Plans'
+      />
+      {/* <article className='mb-12 mt-7 flex items-center justify-between'>
         <div>
           <p className='font-bold md:text-[19px] '>List of Pages</p>
           <p className='text-sm text-gray-400'>
@@ -96,9 +96,9 @@ const ViewAllPages = () => {
         <div className='h-full w-full'>
           <AllPagesTable pages={data?.allPages} refetch={refetch} />
         </div>
-      </TextContentLoader>
+      </TextContentLoader> */}
     </div>
   );
 };
 
-export default ViewAllPages;
+export default PaymentPlans;

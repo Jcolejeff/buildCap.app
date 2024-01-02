@@ -31,6 +31,7 @@ import CONSTANTS from 'constant';
 import API from 'services';
 import toast from 'helper';
 import useStore from 'store';
+import FunkyPagesHero from 'components/general/FunkyPagesHero';
 
 interface GetStartedCard {
   id?: string;
@@ -68,7 +69,7 @@ const FormSchema = z.object({
     }),
 });
 
-const CreateAssistantPage = () => {
+const Dashboard = () => {
   const [formIsLoading, setFormIsLoading] = useState(false);
   const [error, setError] = useState('');
   const [message, setMessage] = useState<{ text: any; isError: boolean }>({
@@ -126,8 +127,9 @@ const CreateAssistantPage = () => {
   }
 
   return (
-    <section className='container relative py-10  '>
-      <div className=' mx-auto    flex max-w-2xl  flex-col gap-4 rounded-[15px]  bg-white shadow-md  md:p-[2.5rem]'>
+    <div className='container flex w-full flex-col px-container-base py-[1.875rem]'>
+      <FunkyPagesHero description='overview of your projects' title='Dashboard' />
+      {/* <div className=' mx-auto    flex max-w-2xl  flex-col gap-4 rounded-[15px]  bg-white shadow-md  md:p-[2.5rem]'>
         <h5 className='mb-[0.35rem] text-center text-[1.5rem] font-[700] leading-[2rem] tracking-[0.01125rem]'>
           Create an App Assistant
         </h5>
@@ -216,9 +218,7 @@ const CreateAssistantPage = () => {
                       {...field}
                     />
                   </FormControl>
-                  {/* <FormDescription className='text-base'>
-                    You'll be contacted within 3 work days.
-                  </FormDescription> */}
+                 
                   <FormMessage />
                 </FormItem>
               )}
@@ -244,9 +244,9 @@ const CreateAssistantPage = () => {
             </div>
           </form>
         </Form>
-      </div>
-    </section>
+      </div> */}
+    </div>
   );
 };
 
-export default CreateAssistantPage;
+export default Dashboard;

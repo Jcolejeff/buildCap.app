@@ -12,47 +12,34 @@ const VerifyEmail = () => {
   // case 2: email reset password link after forgot-password action
 
   return (
-    <div className='flex items-center w-full h-full'>
-      <div className='items-center justify-center hidden h-full overflow-hidden   md:flex bg-primary-15 xl:min-w-[850px] flex-grow-0 flex-shrink-1 basis-auto'>
-        <div className='min-w-[700px] min-h-[669.86px] transition-all ease-in-out duration-300'>
-          <LazyLoadImage
-            className='w-full h-full bg-current'
-            src={playingBoy}
-            effect='blur'
-            alt=' '
-          />
-        </div>
-      </div>
-      <div className='w-full md:max-w-[calc(96px+494px)] mx-auto bg-white px-4 md:px-[3rem]'>
-        <div className='flex flex-col items-start justify-center w-full mx-auto'>
+    <div className='flex h-full w-full items-center'>
+      <div className='mx-auto w-full bg-white px-4 md:max-w-[calc(96px+494px)] md:px-[3rem]'>
+        <div className='mx-auto flex w-full flex-col items-start justify-center'>
           <div
-            className='flex items-center cursor-pointer mb-[2.125rem]'
+            className='mb-[2.125rem] flex cursor-pointer items-center'
             onClick={() => navigate(`/`)}
           >
-            <Icon name='nfmLogo' svgProp={{ width: 40, height: 40 }} />
-            <h4 className='font-[700] text-[22px] whitespace-nowrap   md:text-[28px] leading-[24px] tracking-[0.15px] text-primary-9/[0.87]'>
-              Nollywood Filmmaker.com
-            </h4>
+            <Icon name='nfmLogo' svgProp={{ className: 'w-[88px] md:w-[120px]' }} />
           </div>
-          <div className='flex flex-col w-full mb-[1.5rem]'>
-            <h5 className='text-primary-9/[0.87] font-inter text-[24px] leading-[32px] font-[700] tracking-[0.18px]'>
+          <div className='mb-[1.5rem] flex w-full flex-col'>
+            <h5 className='font-inter text-[16px] font-[700] leading-[32px] tracking-[0.18px] text-primary-9/[0.87]'>
               Verify your email ✉️
             </h5>
-            <p className='text-primary-9/[0.60] leading-[24px] tracking-[0.15px]'>
+            <p className='text-[14px] leading-[16px] tracking-[0.15px] text-primary-9/[0.60]'>
               Account activation link sent to your email address: john.doe@email.com Please follow
               the link inside to continue.
             </p>
           </div>
-          <div className='flex flex-col w-full gap-4 mb-[1.25rem]'>
+          <div className='mb-[1.25rem] flex w-full flex-col gap-4'>
             <button
               onClick={() => navigate(`/${CONSTANTS.ROUTES['login']}`)}
-              className='w-full py-2 text-white bg-primary-1 shadow-3 rounded-[8px] font-[500] text-[15px] hover:opacity-90 transition-opacity duration-300 ease-in-out mb-[1.75rem]'
+              className='mb-[1.75rem] w-full rounded-[8px] bg-primary-1 py-2 text-[15px] font-[500] text-white shadow-3 transition-opacity duration-300 ease-in-out hover:opacity-90'
             >
               <span className='leading-[0.46px]'>Skip for now</span>
             </button>
             <button
               onClick={() => navigate(`/${CONSTANTS.ROUTES['login']}`)}
-              className='place-self-center flex items-center gap-1  text-[14px] leading-[21px] tracking-[0.15px] cursor-pointer'
+              className='flex cursor-pointer items-center gap-1  place-self-center text-[14px] leading-[21px] tracking-[0.15px]'
             >
               <span className='text-secondary-9'>Didn't get the mail? </span>
               <span className=' text-primary-1  hover:underline'> Resend</span>

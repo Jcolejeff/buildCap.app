@@ -86,7 +86,7 @@ const SignUp = () => {
         console.log({ userData });
 
         setAuthDetails(userData);
-        navigate(`/${CONSTANTS.ROUTES['my-assistants']}`);
+        navigate(`/${CONSTANTS.ROUTES['dashboard']}`);
       } catch (error: any) {
         processError(error);
       }
@@ -113,7 +113,7 @@ const SignUp = () => {
         </div>
       </div>
       <div className=' mx-auto    w-1/2 bg-white px-4 md:px-[3rem]'>
-        <div className='mx-auto flex w-full flex-col items-start justify-center'>
+        <div className='mx-auto flex w-full flex-col items-start justify-center  sm:mt-12'>
           <div
             className='mb-[2.125rem] flex   cursor-pointer
              items-center gap-2'
@@ -134,20 +134,22 @@ const SignUp = () => {
             className='mx-auto flex w-full flex-col items-start justify-center'
           >
             <div className='mb-[1.25rem] flex w-full flex-col gap-4'>
-              <InputErrorWrapper error={errors?.first_name?.message}>
-                <Input
-                  {...register('first_name')}
-                  className='w-full placeholder:text-primary-9/[0.38]'
-                  placeholder='First name'
-                />
-              </InputErrorWrapper>
-              <InputErrorWrapper error={errors?.last_name?.message}>
-                <Input
-                  {...register('last_name')}
-                  className='w-full placeholder:text-primary-9/[0.38]'
-                  placeholder='Last name'
-                />
-              </InputErrorWrapper>
+              <div className='items-center gap-4 md:flex'>
+                <InputErrorWrapper error={errors?.first_name?.message}>
+                  <Input
+                    {...register('first_name')}
+                    className='w-full placeholder:text-primary-9/[0.38]'
+                    placeholder='First name'
+                  />
+                </InputErrorWrapper>
+                <InputErrorWrapper error={errors?.last_name?.message}>
+                  <Input
+                    {...register('last_name')}
+                    className='w-full placeholder:text-primary-9/[0.38]'
+                    placeholder='Last name'
+                  />
+                </InputErrorWrapper>
+              </div>
               <InputErrorWrapper error={errors?.email?.message}>
                 <Input
                   {...register('email')}

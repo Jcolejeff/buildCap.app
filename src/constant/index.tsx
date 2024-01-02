@@ -4,8 +4,8 @@ const ROUTES: Record<routePathTypes, routePathTypes> = {
   '': '',
   'create-account': 'create-account',
   'cv-profile': 'cv-profile',
-  'view-pages': 'view-pages',
-  'deploy-assistant': 'deploy-assistant',
+  'payment-plans': 'payment-plans',
+  'users-list': 'users-list',
   dashboard: 'dashboard',
   login: 'login',
   logout: 'logout',
@@ -17,7 +17,7 @@ const ROUTES: Record<routePathTypes, routePathTypes> = {
   'verify-email': 'verify-email',
   'create-assistant': 'create-assistant',
   'my-assistants': 'my-assistants',
-  'customize-your-avatar': 'customize-your-avatar',
+  projects: 'projects',
 };
 
 const TIMBU_KEYS = {

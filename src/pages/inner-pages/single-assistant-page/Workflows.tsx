@@ -126,7 +126,7 @@ export function WorkFlows() {
               >
                 <p className=' text-base font-normal capitalize'>{index + 1}</p>
                 <Link
-                  to={`/${CONSTANTS.ROUTES['view-pages']}/workflow/${item?.id}`}
+                  to={`/${CONSTANTS.ROUTES['payment-plans']}/workflow/${item?.id}`}
                   className=' w-10/12 py-0'
                 >
                   <span className='text-base font-semibold capitalize'>{item.name}</span>
@@ -142,7 +142,7 @@ export function WorkFlows() {
                     <DropdownMenuLabel>Actions</DropdownMenuLabel>
                     <DropdownMenuItem className='flex items-center gap-2'>
                       <Link
-                        to={`/${CONSTANTS.ROUTES['view-pages']}/workflow/${item?.id}`}
+                        to={`/${CONSTANTS.ROUTES['payment-plans']}/workflow/${item?.id}`}
                         className='flex items-center gap-2'
                       >
                         <Icon name='editPen' svgProp={{ className: 'text-black' }}></Icon>

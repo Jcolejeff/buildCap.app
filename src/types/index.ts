@@ -1,15 +1,15 @@
 export type planTypes = 'starter' | 'student' | 'professional' | 'master';
 
 export type routePathTypes =
-  | 'customize-your-avatar'
+  | 'projects'
   | ''
   | 'login'
   | 'create-account'
   | 'cv-profile'
   | 'dashboard'
-  | 'view-pages'
+  | 'payment-plans'
   | 'my-assistants'
-  | 'deploy-assistant'
+  | 'users-list'
   | 'profile'
   | 'settings'
   | 'logout'
