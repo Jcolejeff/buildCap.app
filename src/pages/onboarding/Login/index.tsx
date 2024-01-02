@@ -98,7 +98,7 @@ const Login = () => {
         </DialogContent>
       </Dialog>
       <div className='hidden h-full w-1/2 basis-auto items-center justify-center overflow-hidden   bg-primary-15 md:flex'>
-        <div className='h-full w-full  transition-all duration-300 ease-in-out'>
+        <div className='relative h-full w-full overflow-hidden  transition-all duration-300 after:absolute after:left-0 after:top-0 after:h-full after:w-full after:bg-black/20 after:transition-all after:duration-300'>
           <LazyLoadImage
             className='h-full w-full bg-current object-cover'
             src={loginIcon}
