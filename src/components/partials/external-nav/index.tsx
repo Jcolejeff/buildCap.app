@@ -62,13 +62,10 @@ export const ExternalNav = () => {
       <div className='flex  w-full items-center justify-between py-[1.375rem] transition-all duration-300 ease-in-out md:border-b md:border-extraColor-borderBottom-1 md:py-[1.5rem]'>
         <div className='flex items-center gap-[6rem]'>
           <div className='flex cursor-pointer items-center gap-2' onClick={() => navigate(`/`)}>
-            <Icon
-              name='nfmLogo'
-              svgProp={{ className: 'w-[28px] h-[28px] md:w-[30px] md:h-[30px]' }}
-            />
-            <h4 className='text-[16px] font-[700] leading-[20px] tracking-[0.15px] text-primary-8 md:text-[19px] md:font-[700] md:leading-[24px]'>
+            <Icon name='nfmLogo' svgProp={{ className: 'w-[68px]  md:w-[120px]' }} />
+            {/* <h4 className='text-[16px] font-[700] leading-[20px] tracking-[0.15px] text-primary-8 md:text-[19px] md:font-[700] md:leading-[24px]'>
               App Assistant
-            </h4>
+            </h4> */}
           </div>
         </div>
         <div className='relative w-4/12 max-w-[800px]  '>

@@ -74,7 +74,7 @@ import { ReactComponent as FaqGen } from 'assets/svg/faqGeneral.svg';
 import { ReactComponent as FaqCancellation } from 'assets/svg/faqCancellation.svg';
 import { ReactComponent as FaqPayment } from 'assets/svg/faqPayment.svg';
 import { ReactComponent as FaqSub } from 'assets/svg/faqSub.svg';
-import { ReactComponent as NFMLogo } from 'assets/svg/nfmLogo.svg';
+import { ReactComponent as NFMLogo } from 'assets/svg/logo.svg';
 import { ReactComponent as Location } from 'assets/svg/location.svg';
 import { ReactComponent as BigPlus } from 'assets/svg/bigPlusIcon.svg';
 import { ReactComponent as EditPen } from 'assets/svg/editPen.svg';
@@ -120,6 +120,7 @@ import { ReactComponent as AwardStarIcon } from 'assets/svg/awardStarIcon.svg';
 import { ReactComponent as UserCheck } from 'assets/svg/userCheck.svg';
 import { ReactComponent as Trash } from 'assets/svg/trash.svg';
 import { ReactComponent as Save } from 'assets/svg/saveIcon.svg';
+import { ReactComponent as Menu } from 'assets/svg/menu.svg';
 
 export type iconTypes =
   | 'filmReel'
@@ -244,7 +245,8 @@ export type iconTypes =
   | 'locationIconBlack'
   | 'userCheck'
   | 'trash'
-  | 'saveIcon';
+  | 'saveIcon'
+  | 'menu';
 
 interface IconInterface {
   name: iconTypes;
@@ -375,6 +377,7 @@ const Icon = ({ name, svgProp }: IconInterface) => {
     userCheck: <UserCheck {...svgProp} />,
     trash: <Trash {...svgProp} />,
     saveIcon: <Save {...svgProp} />,
+    menu: <Menu {...svgProp} />,
   };
 
   return icons[name];

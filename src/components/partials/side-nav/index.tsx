@@ -121,25 +121,33 @@ const SideNav = () => {
         navOpen ? ` w-[260px]` : `w-[86px]`
       } relative flex h-full flex-col py-[1.65rem] shadow-3 transition-[width] duration-300 ease-in-out`}
     >
-      {/* <button
+      <button
         onClick={() => setNavOpen((prev) => !prev)}
-        className='absolute -right-[11px] top-[2rem] h-[22px] w-[22px] rounded-[30px] bg-primary-1 ring-[7px] ring-primary-15 z-10'
-      /> */}
-      <div className='pb-[2.5rem]'>
+        className='absolute -right-[11px] top-[2rem] z-10 h-[15px] w-[22px] rounded-[5px] bg-primary-1 ring-[7px] ring-primary-15'
+      />
+      <div className=' pb-[2.5rem]'>
         <div
           onClick={() => navigate(`/`)}
-          className='flex cursor-pointer items-center gap-[0.625rem] px-[1.66rem]'
+          className='flex cursor-pointer items-center gap-[0.625rem] px-[2rem]'
         >
-          <div className='flex items-center'>
-            <Icon name='nfmLogo' svgProp={{ width: 34.75, height: 34.75 }} />
+          <div className='flex  items-center gap-2'>
+            <img src='/fav.png' alt='' className='w-[10px} md:w-[25px]' />
+            <h4
+              className={`text-[16px] font-[900] leading-[20px] tracking-[0.15px] text-primary-8 md:text-[19px] md:font-[900] md:leading-[24px] ${
+                navOpen ? `opacity-100` : `scale-0 opacity-0`
+              }  duration-300`}
+            >
+              buildCAP
+            </h4>
+            {/* <Icon name='nfmLogo' svgProp={{ className: 'w-[68px]  md:w-[100px]' }} /> */}
           </div>
-          <h4
+          {/* <h4
             className={`text-[16px] font-[700] leading-[20px] tracking-[0.15px] text-primary-8 md:text-[19px] md:font-[700] md:leading-[24px] ${
               navOpen ? `opacity-100` : `scale-0 opacity-0`
             }  duration-300`}
           >
             App Assistant
-          </h4>
+          </h4> */}
         </div>
       </div>
       <div className='no-scrollbar flex flex-grow flex-col gap-[1.125rem] overflow-y-auto overflow-x-hidden'>

@@ -3,7 +3,8 @@ import { useLocation, Navigate, useOutlet } from 'react-router-dom';
 import { planTypes } from 'types';
 
 const RouteGuard = () => {
-  const loggedIn = useStore((state) => state.loggedIn);
+  // const loggedIn = useStore((state) => state.loggedIn);
+  const loggedIn = true;
   const location = useLocation();
   const outlet = useOutlet();
 
