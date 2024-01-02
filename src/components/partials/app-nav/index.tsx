@@ -84,7 +84,7 @@ const AppNav = () => {
             <DropdownMenuTrigger asChild>
               <Button
                 variant='ghost'
-                className=' flex items-center gap-2 justify-self-center hover:bg-inherit'
+                className=' invisible flex items-center gap-2 justify-self-center hover:bg-inherit'
                 disabled={isLoading}
               >
                 <InlineLoader

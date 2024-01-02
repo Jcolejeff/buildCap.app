@@ -63,7 +63,9 @@ const AccountSettings = () => {
         </div>
         {/* ... */}
 
-        <div className='mt-7'>{/* <DisplayTab title={currFilter} /> */}</div>
+        <div className='mt-7'>
+          <DisplayTab title={currFilter} />
+        </div>
       </div>
     </div>
   );
