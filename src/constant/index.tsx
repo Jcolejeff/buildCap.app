@@ -18,6 +18,7 @@ const ROUTES: Record<routePathTypes, routePathTypes> = {
   'create-assistant': 'create-assistant',
   'my-assistants': 'my-assistants',
   projects: 'projects',
+  'subcontractor-management': 'subcontractor-management',
 };
 
 const USER_PAGES_PERMISSIONS: Record<routePathTypes, userTypes> = {
@@ -25,7 +26,7 @@ const USER_PAGES_PERMISSIONS: Record<routePathTypes, userTypes> = {
   'create-account': 'admin',
   'cv-profile': 'admin',
   'payment-plans': 'admin',
-  'users-list': 'admin',
+  'users-list': 'supplier',
   dashboard: 'admin',
   login: 'admin',
   logout: 'admin',
@@ -37,7 +38,8 @@ const USER_PAGES_PERMISSIONS: Record<routePathTypes, userTypes> = {
   'verify-email': 'admin',
   'create-assistant': 'admin',
   'my-assistants': 'admin',
-  projects: 'supplier',
+  projects: 'maincontractor',
+  'subcontractor-management': 'maincontractor',
 };
 
 const TIMBU_KEYS = {

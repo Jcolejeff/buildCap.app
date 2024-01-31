@@ -25,7 +25,7 @@ import { useNavigate } from 'react-router-dom';
 import UserPageGuard from 'guards/UserPageGuard';
 import useStore, { StoreType } from 'store';
 
-const CustomizeYourAvatarPage = () => {
+const SubcontractorManagement = () => {
   const navigate = useNavigate();
 
   const { supplierName } = useStore((state: StoreType) => state);
@@ -40,9 +40,12 @@ const CustomizeYourAvatarPage = () => {
   console.log(supplierName);
 
   return (
-    <UserPageGuard page={CONSTANTS.ROUTES.projects}>
+    <UserPageGuard page={CONSTANTS.ROUTES['subcontractor-management']}>
       <div className='container   w-full  px-container-base py-[1.875rem] '>
-        <FunkyPagesHero description='list of your active and inactive projects' title='Projects' />
+        <FunkyPagesHero
+          description='list of your active and inactive projects'
+          title='Subcontractor Management'
+        />
 
         <section className='container  bg-white px-container-base'>
           <article className='mb-12 mt-7 flex items-center justify-between'>
@@ -83,4 +86,4 @@ const CustomizeYourAvatarPage = () => {
   );
 };
 
-export default CustomizeYourAvatarPage;
+export default SubcontractorManagement;

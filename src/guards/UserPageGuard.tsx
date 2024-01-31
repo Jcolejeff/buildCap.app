@@ -10,12 +10,12 @@ interface IUserPageGuard {
 }
 
 const UserPageGuard = ({ children, page }: IUserPageGuard) => {
-  const currentTypeOfUser = useStore((state) => state?.plan);
+  const currentTypeOfUser = useStore((state) => state?.typeOfUser);
   const { isAllowed } = useCheckTypeOfUser({ currentTypeOfUser: currentTypeOfUser });
 
   const allowed = useMemo(() => {
-    const typeOfPage = CONSTANTS.USER_PAGES_PERMISSIONS[page];
-    return isAllowed(typeOfPage);
+    const typeOfUser = CONSTANTS.USER_PAGES_PERMISSIONS[page];
+    return isAllowed(typeOfUser);
   }, [isAllowed, page]);
 
   return allowed ? (

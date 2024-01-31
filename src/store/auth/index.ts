@@ -4,7 +4,7 @@ import { authDetailsInterface, userTypes } from 'types';
 export type AuthStateType = {
   authLoading: boolean;
   loggedIn: boolean;
-  plan: userTypes;
+  typeOfUser: userTypes;
   setLoggedIn: (arg: boolean) => void;
   setPlan: (arg: userTypes) => void;
   setAuthLoading: (arg: boolean) => void;
@@ -63,7 +63,7 @@ const authStore: StateCreator<AuthStateType, [['zustand/devtools', never]], []> 
   setPageId: (arg) => {
     set({ pageId: arg });
   },
-  plan: 'supplier',
+  typeOfUser: 'maincontractor',
   setAuthLoading: (arg) => {
     set({ authLoading: arg });
   },
@@ -71,7 +71,7 @@ const authStore: StateCreator<AuthStateType, [['zustand/devtools', never]], []> 
     set({ loggedIn: arg });
   },
   setPlan: (arg) => {
-    set({ plan: arg });
+    set({ typeOfUser: arg });
   },
   authDetails: {},
   setAuthDetails: (arg) => {

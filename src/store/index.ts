@@ -2,7 +2,7 @@ import { create } from 'zustand';
 import { devtools, persist } from 'zustand/middleware';
 import authSlice, { AuthStateType } from './auth';
 import supplierStore, { SupplierStateType } from './supplier';
-import subContractorStore, { subContractorStateType } from './subcontractor';
+import subContractorStore, { subcontractorStateType } from './subcontractor';
 import adminStore, { adminStateType } from './admin';
 import maincontractorStore, { maincontractorStateType } from './maincontractor';
 
@@ -21,7 +21,7 @@ import maincontractorStore, { maincontractorStateType } from './maincontractor';
 
 export type StoreType = AuthStateType &
   SupplierStateType &
-  subContractorStateType &
+  subcontractorStateType &
   adminStateType &
   maincontractorStateType;
 

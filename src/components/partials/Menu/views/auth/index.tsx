@@ -10,7 +10,7 @@ import Icon from 'utils/Icon';
 
 const AuthMenu = ({ close }: { close: () => void }) => {
   const nav = useNavigate();
-  const currentTypeOfUser = useStore((state) => state.plan);
+  const currentTypeOfUser = useStore((state) => state.typeOfUser);
 
   const navigate = (i: string) => {
     close();

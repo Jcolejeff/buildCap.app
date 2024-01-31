@@ -15,7 +15,7 @@ const usersAllowed: Record<userTypes, userTypes> = {
 function useCheckTypeOfUser({ currentTypeOfUser }: IAllowedTypesOfUsers) {
   const isAllowed = useCallback(
     (allowedUser: userTypes) => {
-      return usersAllowed[currentTypeOfUser] == usersAllowed[allowedUser] ? true : false;
+      return usersAllowed[currentTypeOfUser] === usersAllowed[allowedUser] ? true : false;
     },
     [currentTypeOfUser],
   );

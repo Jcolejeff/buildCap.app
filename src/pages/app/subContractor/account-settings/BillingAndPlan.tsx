@@ -43,7 +43,7 @@ const BillingAndPlan = () => {
   //               </p>
   //             </span>
   //             <p className='mt-1 text-[13px] font-semibold text-gray-400 md:text-[13px] lg:text-[14px]'>
-  //               Standard plan for small to medium businesses
+  //               Standard typeOfUser for small to medium businesses
   //             </p>
   //           </span>
   //         </div>
@@ -61,7 +61,7 @@ const BillingAndPlan = () => {
   //                     We need your attention!
   //                   </p>
   //                   <p className='text-[13px] font-semibold text-amber-400 md:text-[13px] lg:text-[14px]'>
-  //                     Your plan requires update
+  //                     Your typeOfUser requires update
   //                   </p>
   //                 </span>
   //                 <span>
@@ -88,7 +88,7 @@ const BillingAndPlan = () => {
   //               <div className='h-2.5 rounded-full bg-primary-1' style={{ width: '75%' }}></div>
   //             </div>
   //             <p className='mt-1 text-[12px] font-semibold text-gray-400 md:text-[13px] lg:text-[14px]'>
-  //               6 days remaining until your plan requires update
+  //               6 days remaining until your typeOfUser requires update
   //             </p>
   //           </span>
   //         </div>

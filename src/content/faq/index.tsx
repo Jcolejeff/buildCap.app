@@ -79,7 +79,7 @@ export const faqs: Record<any, any[]> = {
     },
     {
       title: `What happens if I don’t use the platform in a month or more within my 1 year
-    subscription plan?`,
+    subscription typeOfUser?`,
       body: `Nothing, ma/sir.`,
     },
   ],
@@ -94,7 +94,7 @@ export const faqs: Record<any, any[]> = {
       title: `Can I be a part of the community from outside Lagos/Nigeria?`,
       body: `Yes, you can. We have an Online Interactive Training and General and
     subcontractor Support Forums. There are the Live Masterclasses/Workshops that
-    you can plan to attend or access via zoom. We also have a yearly 2-day
+    you can typeOfUser to attend or access via zoom. We also have a yearly 2-day
     bootcamp but this is only available for Master Subscribers.`,
     },
     {
@@ -368,7 +368,7 @@ export const faqs: Record<any, any[]> = {
       ),
     },
     {
-      title: `Can I upgrade from one plan to another? / How do I switch my payment plan along the
+      title: `Can I upgrade from one typeOfUser to another? / How do I switch my payment typeOfUser along the
     line?`,
       body: `Yes, you can upgrade and cancel subscriptions any time`,
     },

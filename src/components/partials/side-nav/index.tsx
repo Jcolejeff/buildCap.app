@@ -21,10 +21,12 @@ type ISideNavTitles =
   | 'Settings'
   | 'Users'
   | 'Payment Plans'
-  | 'Projects';
+  | 'Projects'
+  | 'Subcontractor Management';
 
 interface extendedRouteInterface extends ItitleLinks<ISideNavTitles, routePathTypes> {
   icons: JSX.Element;
+  userType: userTypes;
 }
 
 interface ISideNavLinks {
@@ -47,7 +49,24 @@ export const sideNavLinks: ISideNavLinks = {
           name='fileIcon'
         />
       ),
+      userType: CONSTANTS.USER_PAGES_PERMISSIONS['projects'],
     },
+    {
+      link: 'subcontractor-management',
+      title: 'Subcontractor Management',
+      icons: (
+        <Icon
+          svgProp={{
+            width: 22.75,
+            height: 22.75,
+            className: 'text-current',
+          }}
+          name='fileIcon'
+        />
+      ),
+      userType: CONSTANTS.USER_PAGES_PERMISSIONS['subcontractor-management'],
+    },
+
     {
       link: 'payment-plans',
       title: 'Payment Plans',
@@ -61,7 +80,9 @@ export const sideNavLinks: ISideNavLinks = {
           }}
         />
       ),
+      userType: CONSTANTS.USER_PAGES_PERMISSIONS['payment-plans'],
     },
+
     {
       link: 'users-list',
       title: 'Users',
@@ -75,6 +96,7 @@ export const sideNavLinks: ISideNavLinks = {
           name='pForumIcon'
         />
       ),
+      userType: CONSTANTS.USER_PAGES_PERMISSIONS['users-list'],
     },
   ],
   features: [
@@ -91,6 +113,7 @@ export const sideNavLinks: ISideNavLinks = {
           name='btsIcon'
         />
       ),
+      userType: CONSTANTS.USER_PAGES_PERMISSIONS['settings'],
     },
 
     // {
@@ -112,7 +135,7 @@ export const sideNavLinks: ISideNavLinks = {
 
 const SideNav = () => {
   const [navOpen, setNavOpen] = useState(true);
-  const currentTypeOfUser = useStore((state) => state.plan);
+  const currentTypeOfUser = useStore((state) => state.typeOfUser);
   const navigate = useNavigate();
 
   const { isAllowed } = useCheckTypeOfUser({ currentTypeOfUser: currentTypeOfUser });
@@ -122,7 +145,7 @@ const SideNav = () => {
   return (
     <div
       className={`sticky bottom-0 top-0 ${
-        navOpen ? ` w-[260px]` : `w-[86px]`
+        navOpen ? ` w-[280px]` : `w-[86px]`
       } relative flex h-full flex-col py-[1.65rem] shadow-3 transition-[width] duration-300 ease-in-out`}
     >
       <button
@@ -201,28 +224,34 @@ const SideNav = () => {
             navOpen ? `opacity-100` : `opacity-0`
           } transition-opacity duration-300`}
         ></div>
+        <div className='absolute left-0 top-1/3 w-4 border border-action-disabledBg' />
+        <div className='px-8 text-[12px] font-[400] leading-[14px] tracking-[0.4px] text-gray-400'>
+          {`Dashboards`?.toUpperCase()}
+        </div>
         <div className='mb-[1.125rem] flex flex-col'>
-          {sideNavLinks['discussions']?.map((i, idx) => (
-            <div className='px-4' key={idx}>
-              <div
-                onClick={() => navigate(`/mc/${i?.link}`)}
-                className={`flex cursor-pointer items-center gap-[0.625rem] rounded-[6px] px-4 py-[0.625rem] text-secondary-9
+          {sideNavLinks['discussions']
+            ?.filter((item, index) => isAllowed(item?.userType))
+            ?.map((i, idx) => (
+              <div className='px-4' key={idx}>
+                <div
+                  onClick={() => navigate(`/mc/${i?.link}`)}
+                  className={`flex cursor-pointer items-center gap-[0.625rem] rounded-[6px] px-4 py-[0.625rem] text-secondary-9
                hover:bg-primary-light 
                 ${location?.pathname === `/mc/${i?.link}` ? `!bg-primary-1 !text-white/95` : ``}
                 group
                 transition duration-300 ease-in-out hover:text-primary-1`}
-              >
-                <div className='flex items-center'>{i?.icons}</div>
-                <h6
-                  className={`whitespace-nowrap text-[14px] font-[400] leading-[24px]  tracking-[0.15px]
+                >
+                  <div className='flex items-center'>{i?.icons}</div>
+                  <h6
+                    className={`whitespace-nowrap text-[14px] font-[400] leading-[24px]  tracking-[0.15px]
               ${navOpen ? `opacity-100` : `scale-0 opacity-0`}
               duration-300`}
-                >
-                  {i?.title}
-                </h6>
+                  >
+                    {i?.title}
+                  </h6>
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
         </div>
         <div
           className={`relative h-[1px] w-full bg-gray-200   ${

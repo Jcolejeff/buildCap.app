@@ -1,5 +1,7 @@
 import FunkyPagesHero from 'components/general/FunkyPagesHero';
 import { useState } from 'react';
+import UserPageGuard from 'guards/UserPageGuard';
+import CONSTANTS from 'constant';
 
 import Icon from 'utils/Icon';
 import toast from 'helper';
@@ -21,13 +23,15 @@ const UserList = () => {
   const [currFilter, setCurrFilter] = useState<filterTypes>('Trending');
 
   return (
-    <div className='container flex w-full flex-col gap-6 px-container-base py-[1.875rem]'>
-      <FunkyPagesHero
-        description='manage your users here.
+    <UserPageGuard page={CONSTANTS.ROUTES['users-list']}>
+      <div className='container flex w-full flex-col gap-6 px-container-base py-[1.875rem]'>
+        <FunkyPagesHero
+          description='manage your users here.
       '
-        title='User List'
-      />
-    </div>
+          title='User List'
+        />
+      </div>
+    </UserPageGuard>
   );
 };
 

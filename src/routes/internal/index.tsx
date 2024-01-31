@@ -47,6 +47,10 @@ const internalRoute: routeTypes = [
 export const maincontractorRoutes: routeTypes = [
   {
     element: <Projects />,
+    path: 'subcontractor-management',
+  },
+  {
+    element: <Projects />,
     path: 'projects',
   },
 

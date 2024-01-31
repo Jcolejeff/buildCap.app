@@ -17,7 +17,8 @@ export type routePathTypes =
   | 'forgot-password'
   | 'verify-email'
   | 'new-password'
-  | 'create-assistant';
+  | 'create-assistant'
+  | 'subcontractor-management';
 
 export interface routesInterface<T> {
   path: T;
@@ -27,7 +28,7 @@ export interface routesInterface<T> {
 export type routeTypes = routesInterface<routePathTypes>[];
 
 export interface RouteGuardInterface {
-  plan: userTypes;
+  typeOfUser: userTypes;
 }
 
 export interface ItitleLinks<T, L> {
