@@ -1,4 +1,4 @@
-import Account from 'pages/app/account-settings/Account';
+import Account from 'pages/app/subContractor/account-settings/Account';
 import BillingAndPlan from './BillingAndPlan';
 import Connections from './Connections';
 import Notification from './Notification';

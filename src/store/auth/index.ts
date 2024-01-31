@@ -63,7 +63,7 @@ const authStore: StateCreator<AuthStateType, [['zustand/devtools', never]], []> 
   setPageId: (arg) => {
     set({ pageId: arg });
   },
-  plan: 'starter',
+  plan: 'master',
   setAuthLoading: (arg) => {
     set({ authLoading: arg });
   },

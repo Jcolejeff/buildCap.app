@@ -1,10 +1,16 @@
 import { Routes, Route, Navigate } from 'react-router-dom';
 import RouteGuard from 'guards/RouteGuard';
 import externalRoute from 'routes/external';
-import internalRoute, { innerInternalRoutes } from 'routes/internal';
+import internalRoute, {
+  innerInternalRoutes,
+  mainContractorRoutes,
+  subContractorRoutes,
+  adminRoutes,
+  supplierRoutes,
+} from 'routes/internal';
 import ExternalLayout from 'layouts/external-layout';
 import AppLayout from 'layouts/app-layout';
-import checkOutRoutes from 'routes/checkout';
+import authRoutes from 'routes/checkout';
 import { Toaster, resolveValue } from 'react-hot-toast';
 
 function App() {
@@ -33,12 +39,40 @@ function App() {
         )}
       </Toaster>
       <Routes>
-        {checkOutRoutes?.map((i, idx) => (
+        {authRoutes?.map((i, idx) => (
           <Route key={`${idx}${i?.path}`} path={`/${i.path}`} element={i.element} />
         ))}
 
-        {externalRoute?.map((i, idx) => (
-          <Route key={`${idx}${i?.path}`} element={<ExternalLayout />}>
+        {mainContractorRoutes?.map((i, idx) => (
+          <Route key={`${idx}${i?.path}`} element={<AppLayout />}>
+            <Route element={<RouteGuard />}>
+              <Route path={`/mc/${i.path}`} element={i.element} />
+            </Route>
+          </Route>
+        ))}
+        {subContractorRoutes?.map((i, idx) => (
+          <Route key={`${idx}${i?.path}`} element={<AppLayout />}>
+            <Route element={<RouteGuard />}>
+              <Route path={`/sc/${i.path}`} element={i.element} />
+            </Route>
+          </Route>
+        ))}
+        {supplierRoutes?.map((i, idx) => (
+          <Route key={`${idx}${i?.path}`} element={<AppLayout />}>
+            <Route element={<RouteGuard />}>
+              <Route path={`/sp/${i.path}`} element={i.element} />
+            </Route>
+          </Route>
+        ))}
+        {adminRoutes?.map((i, idx) => (
+          <Route key={`${idx}${i?.path}`} element={<AppLayout />}>
+            <Route element={<RouteGuard />}>
+              <Route path={`/admin/${i.path}`} element={i.element} />
+            </Route>
+          </Route>
+        ))}
+        {internalRoute?.map((i, idx) => (
+          <Route key={`${idx}${i?.path}`} element={<AppLayout />}>
             <Route element={<RouteGuard />}>
               <Route path={`/${i.path}`} element={i.element} />
             </Route>
@@ -51,13 +85,15 @@ function App() {
             </Route>
           </Route>
         ))}
-        {internalRoute?.map((i, idx) => (
-          <Route key={`${idx}${i?.path}`} element={<AppLayout />}>
+
+        {externalRoute?.map((i, idx) => (
+          <Route key={`${idx}${i?.path}`} element={<ExternalLayout />}>
             <Route element={<RouteGuard />}>
               <Route path={`/${i.path}`} element={i.element} />
             </Route>
           </Route>
         ))}
+
         <Route path='notfound' element={<></>} />
         <Route path='*' element={<Navigate to='/notfound' replace />} />
       </Routes>

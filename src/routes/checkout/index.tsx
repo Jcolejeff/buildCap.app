@@ -5,7 +5,11 @@ import SignUp from 'pages/onboarding/SignUp';
 import VerifyEmail from 'pages/onboarding/VerifyEmail';
 import { routeTypes } from 'types';
 
-const checkOutRoutes: routeTypes = [
+const authRoutes: routeTypes = [
+  {
+    element: <Login />,
+    path: '',
+  },
   {
     element: <Login />,
     path: 'login',
@@ -29,4 +33,4 @@ const checkOutRoutes: routeTypes = [
   },
 ];
 
-export default checkOutRoutes;
+export default authRoutes;
