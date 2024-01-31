@@ -23,10 +23,12 @@ import FeaturedLoader from 'components/Loaders/FeaturedLoader';
 import CONSTANTS from 'constant';
 import { useNavigate } from 'react-router-dom';
 import PlanGuard from 'guards/PlanGuard';
+import useStore, { StoreType } from 'store';
 
 const CustomizeYourAvatarPage = () => {
   const navigate = useNavigate();
 
+  const { supplierName } = useStore((state: StoreType) => state);
   // const { data, isLoading } = useQuery<any, any, apiInterface<contentApiItemInterface[]>>({
   //   queryKey: ['get-blogs'],
   //   queryFn: () => contentService.getContent(),
@@ -34,6 +36,8 @@ const CustomizeYourAvatarPage = () => {
   //     processError(err);
   //   },
   // });
+
+  console.log(supplierName);
 
   return (
     <PlanGuard page={CONSTANTS.ROUTES.projects}>

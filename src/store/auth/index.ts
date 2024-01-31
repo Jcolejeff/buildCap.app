@@ -1,7 +1,7 @@
 import { StateCreator } from 'zustand';
 import { authDetailsInterface, planTypes } from 'types';
 
-export type StoreStateType = {
+export type AuthStateType = {
   authLoading: boolean;
   loggedIn: boolean;
   plan: planTypes;
@@ -28,7 +28,7 @@ export type StoreStateType = {
   setFilteredApps: (arg: any[]) => void;
 };
 
-const storeSlice: StateCreator<StoreStateType, [['zustand/devtools', never]], []> = (set) => ({
+const authStore: StateCreator<AuthStateType, [['zustand/devtools', never]], []> = (set) => ({
   searchInput: '',
   setSearchInput: (arg) => {
     set({ searchInput: arg });
@@ -79,4 +79,4 @@ const storeSlice: StateCreator<StoreStateType, [['zustand/devtools', never]], []
   },
 });
 
-export default storeSlice;
+export default authStore;
