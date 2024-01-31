@@ -22,6 +22,7 @@ import { apiInterface, contentApiItemInterface } from 'types';
 import FeaturedLoader from 'components/Loaders/FeaturedLoader';
 import CONSTANTS from 'constant';
 import { useNavigate } from 'react-router-dom';
+import PlanGuard from 'guards/PlanGuard';
 
 const CustomizeYourAvatarPage = () => {
   const navigate = useNavigate();
@@ -35,10 +36,11 @@ const CustomizeYourAvatarPage = () => {
   // });
 
   return (
-    <div className='container   w-full  px-container-base py-[1.875rem] '>
-      <FunkyPagesHero description='list of your active and inactive projects' title='Projects' />
+    <PlanGuard page={CONSTANTS.ROUTES.projects}>
+      <div className='container   w-full  px-container-base py-[1.875rem] '>
+        <FunkyPagesHero description='list of your active and inactive projects' title='Projects' />
 
-      {/* <section className='container  bg-white px-container-base'>
+        {/* <section className='container  bg-white px-container-base'>
         <article className='mb-12 mt-7 flex items-center justify-between'>
           <div>
             <p className='font-bold md:text-[19px] '>Customize your Avatar</p>
@@ -72,7 +74,8 @@ const CustomizeYourAvatarPage = () => {
           </div>
         </FeaturedLoader>
       </section> */}
-    </div>
+      </div>
+    </PlanGuard>
   );
 };
 

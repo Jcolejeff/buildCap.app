@@ -160,7 +160,7 @@ const SideNav = () => {
             onClick={() => navigate(`/${CONSTANTS.ROUTES['dashboard']}`)}
             className={`flex items-center gap-[0.625rem] px-4 py-[0.625rem] hover:bg-primary-light 
             ${
-              isAllowed(`student`) ? `text-secondary-9` : `text-secondary-13`
+              isAllowed(`starter`) ? `text-secondary-9` : `text-secondary-13`
             } hover:text-primary-1 ${
               location?.pathname === `/${CONSTANTS.ROUTES['dashboard']}`
                 ? `bg-primary-1 !text-white/95`
@@ -169,7 +169,7 @@ const SideNav = () => {
             group cursor-pointer rounded-[6px] transition duration-300 ease-in-out`}
           >
             <div className='flex items-center'>
-              {!isAllowed(`student`) ? (
+              {!isAllowed(`starter`) ? (
                 <Icon
                   svgProp={{
                     width: 22.75,

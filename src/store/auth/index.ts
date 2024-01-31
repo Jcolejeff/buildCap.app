@@ -63,7 +63,7 @@ const storeSlice: StateCreator<StoreStateType, [['zustand/devtools', never]], []
   setPageId: (arg) => {
     set({ pageId: arg });
   },
-  plan: 'master',
+  plan: 'starter',
   setAuthLoading: (arg) => {
     set({ authLoading: arg });
   },
