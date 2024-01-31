@@ -1,5 +1,5 @@
 import { StateCreator } from 'zustand';
-import { authDetailsInterface, planTypes } from 'types';
+import { authDetailsInterface, userTypes } from 'types';
 
 export type SupplierStateType = {
   supplierName: string;

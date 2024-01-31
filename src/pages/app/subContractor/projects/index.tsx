@@ -22,7 +22,7 @@ import { apiInterface, contentApiItemInterface } from 'types';
 import FeaturedLoader from 'components/Loaders/FeaturedLoader';
 import CONSTANTS from 'constant';
 import { useNavigate } from 'react-router-dom';
-import PlanGuard from 'guards/PlanGuard';
+import UserPageGuard from 'guards/UserPageGuard';
 import useStore, { StoreType } from 'store';
 
 const CustomizeYourAvatarPage = () => {
@@ -40,7 +40,7 @@ const CustomizeYourAvatarPage = () => {
   console.log(supplierName);
 
   return (
-    <PlanGuard page={CONSTANTS.ROUTES.projects}>
+    <UserPageGuard page={CONSTANTS.ROUTES.projects}>
       <div className='container   w-full  px-container-base py-[1.875rem] '>
         <FunkyPagesHero description='list of your active and inactive projects' title='Projects' />
 
@@ -79,7 +79,7 @@ const CustomizeYourAvatarPage = () => {
         </FeaturedLoader>
       </section> */}
       </div>
-    </PlanGuard>
+    </UserPageGuard>
   );
 };
 

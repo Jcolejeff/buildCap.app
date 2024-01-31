@@ -17,7 +17,6 @@ import { ReactComponent as SearchIcon } from 'assets/svg/searchIcon.svg';
 import { ReactComponent as ThreeDotIcon } from 'assets/svg/threeDotIcon.svg';
 import { ReactComponent as PadLock } from 'assets/svg/padLock.svg';
 import { ReactComponent as PadLockV2 } from 'assets/svg/padLockV2.svg';
-import { ReactComponent as StudentIcon } from 'assets/svg/studentIcon.svg';
 import { ReactComponent as DemoDp } from 'assets/svg/demoDp.svg';
 import { ReactComponent as ExternalLink } from 'assets/svg/externalLink.svg';
 import { ReactComponent as FunkyPagesHero } from 'assets/svg/funkyPagesHero.svg';
@@ -50,10 +49,8 @@ import { ReactComponent as Arrow45 } from 'assets/svg/arrow45.svg';
 import { ReactComponent as GearIcon } from 'assets/svg/gearIcon.svg';
 import { ReactComponent as ThumbIcon } from 'assets/svg/thumbIcon.svg';
 import { ReactComponent as ShareIcon } from 'assets/svg/shareIcon.svg';
-import { ReactComponent as PricingStudent } from 'assets/svg/pricingStudentIcon.svg';
 import { ReactComponent as PricingMaster } from 'assets/svg/pricingMasterIcon.svg';
 import { ReactComponent as PricingPro } from 'assets/svg/pricingProIcon.svg';
-import { ReactComponent as PricingStarter } from 'assets/svg/pricingStarterIcon.svg';
 import { ReactComponent as ListButton } from 'assets/svg/listButton.svg';
 import { ReactComponent as FaqBannerSvg } from 'assets/svg/faqBannerSvg.svg';
 import { ReactComponent as PhoneIcon } from 'assets/svg/phoneIcon.svg';
@@ -143,7 +140,6 @@ export type iconTypes =
   | 'threeDotIcon'
   | 'padLock'
   | 'padLockV2'
-  | 'studentIcon'
   | 'demoDp'
   | 'funkyPagesHero'
   | 'funkyPagesTextTop'
@@ -175,8 +171,6 @@ export type iconTypes =
   | 'gearIcon'
   | 'thumb'
   | 'shareIcon'
-  | 'pricingStarter'
-  | 'pricingStudent'
   | 'pricingPro'
   | 'pricingMaster'
   | 'listButton'
@@ -275,7 +269,6 @@ const Icon = ({ name, svgProp }: IconInterface) => {
     threeDotIcon: <ThreeDotIcon {...svgProp} />,
     padLock: <PadLock {...svgProp} />,
     padLockV2: <PadLockV2 {...svgProp} />,
-    studentIcon: <StudentIcon {...svgProp} />,
     demoDp: <DemoDp {...svgProp} />,
     funkyPagesHero: <FunkyPagesHero {...svgProp} />,
     funkyPagesTextTop: <FunkyPagesTextTop {...svgProp} />,
@@ -308,8 +301,6 @@ const Icon = ({ name, svgProp }: IconInterface) => {
     thumb: <ThumbIcon {...svgProp} />,
     pricingMaster: <PricingMaster {...svgProp} />,
     pricingPro: <PricingPro {...svgProp} />,
-    pricingStarter: <PricingStarter {...svgProp} />,
-    pricingStudent: <PricingStudent {...svgProp} />,
     listButton: <ListButton {...svgProp} />,
     faqBanner: <FaqBannerSvg {...svgProp} />,
     phoneIcon: <PhoneIcon {...svgProp} />,

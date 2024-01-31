@@ -3,8 +3,8 @@ import RouteGuard from 'guards/RouteGuard';
 import externalRoute from 'routes/external';
 import internalRoute, {
   innerInternalRoutes,
-  mainContractorRoutes,
-  subContractorRoutes,
+  maincontractorRoutes,
+  subcontractorRoutes,
   adminRoutes,
   supplierRoutes,
 } from 'routes/internal';
@@ -43,14 +43,14 @@ function App() {
           <Route key={`${idx}${i?.path}`} path={`/${i.path}`} element={i.element} />
         ))}
 
-        {mainContractorRoutes?.map((i, idx) => (
+        {maincontractorRoutes?.map((i, idx) => (
           <Route key={`${idx}${i?.path}`} element={<AppLayout />}>
             <Route element={<RouteGuard />}>
               <Route path={`/mc/${i.path}`} element={i.element} />
             </Route>
           </Route>
         ))}
-        {subContractorRoutes?.map((i, idx) => (
+        {subcontractorRoutes?.map((i, idx) => (
           <Route key={`${idx}${i?.path}`} element={<AppLayout />}>
             <Route element={<RouteGuard />}>
               <Route path={`/sc/${i.path}`} element={i.element} />

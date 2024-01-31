@@ -1,9 +1,9 @@
 import CONSTANTS from 'constant';
-import usePlan from 'hooks/business-logic/usePlan';
+import useCheckTypeOfUser from 'hooks/business-logic/useCheckTypeOfUser';
 import { useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import useStore from 'store';
-import { ItitleLinks, planTypes, routePathTypes } from 'types';
+import { ItitleLinks, userTypes, routePathTypes } from 'types';
 import Icon from 'utils/Icon';
 
 type ISideNavTitles =
@@ -112,10 +112,10 @@ export const sideNavLinks: ISideNavLinks = {
 
 const SideNav = () => {
   const [navOpen, setNavOpen] = useState(true);
-  const currentUserPlan = useStore((state) => state.plan);
+  const currentTypeOfUser = useStore((state) => state.plan);
   const navigate = useNavigate();
 
-  const { isAllowed } = usePlan({ currUserPlan: currentUserPlan });
+  const { isAllowed } = useCheckTypeOfUser({ currentTypeOfUser: currentTypeOfUser });
 
   const location = useLocation();
 
@@ -157,19 +157,19 @@ const SideNav = () => {
       <div className='no-scrollbar flex flex-grow flex-col gap-[1.125rem] overflow-y-auto overflow-x-hidden'>
         <div className='px-4 '>
           <div
-            onClick={() => navigate(`/${CONSTANTS.ROUTES['dashboard']}`)}
+            onClick={() => navigate(`/mc/${CONSTANTS.ROUTES['dashboard']}`)}
             className={`flex items-center gap-[0.625rem] px-4 py-[0.625rem] hover:bg-primary-light 
             ${
-              isAllowed(`starter`) ? `text-secondary-9` : `text-secondary-13`
+              isAllowed(`maincontractor`) ? `text-secondary-9` : `text-secondary-13`
             } hover:text-primary-1 ${
-              location?.pathname === `/${CONSTANTS.ROUTES['dashboard']}`
+              location?.pathname === `/mc/${CONSTANTS.ROUTES['dashboard']}`
                 ? `bg-primary-1 !text-white/95`
                 : ``
             }
             group cursor-pointer rounded-[6px] transition duration-300 ease-in-out`}
           >
             <div className='flex items-center'>
-              {!isAllowed(`starter`) ? (
+              {!isAllowed(`admin`) ? (
                 <Icon
                   svgProp={{
                     width: 22.75,
@@ -205,10 +205,10 @@ const SideNav = () => {
           {sideNavLinks['discussions']?.map((i, idx) => (
             <div className='px-4' key={idx}>
               <div
-                onClick={() => navigate(`/${i?.link}`)}
+                onClick={() => navigate(`/mc/${i?.link}`)}
                 className={`flex cursor-pointer items-center gap-[0.625rem] rounded-[6px] px-4 py-[0.625rem] text-secondary-9
                hover:bg-primary-light 
-                ${location?.pathname === `/${i?.link}` ? `!bg-primary-1 !text-white/95` : ``}
+                ${location?.pathname === `/mc/${i?.link}` ? `!bg-primary-1 !text-white/95` : ``}
                 group
                 transition duration-300 ease-in-out hover:text-primary-1`}
               >
@@ -233,10 +233,10 @@ const SideNav = () => {
           {sideNavLinks['features']?.map((i, idx) => (
             <div className='px-4' key={idx}>
               <div
-                onClick={() => navigate(`/${i?.link}`)}
+                onClick={() => navigate(`/mc/${i?.link}`)}
                 className={`flex cursor-pointer items-center gap-[0.625rem] rounded-[6px] px-4 py-[0.625rem] text-secondary-9
             hover:bg-primary-light 
-                ${location?.pathname === `/${i?.link}` ? `bg-primary-1 !text-white/95` : ``}
+                ${location?.pathname === `/mc/${i?.link}` ? `bg-primary-1 !text-white/95` : ``}
                 group
                 transition duration-300 ease-in-out hover:text-primary-1`}
               >
@@ -261,13 +261,13 @@ const SideNav = () => {
               triggerClassName='w-full h-full'
               trigger={
                 <div className='flex h-full w-full items-center gap-[0.8rem]'>
-                  <div className='flex items-center'>{planTokens[currentUserPlan]?.icon}</div>
+                  <div className='flex items-center'>{planTokens[currentTypeOfUser]?.icon}</div>
                   <h6
                     className={`whitespace-nowrap text-[16px] font-[600] leading-[24px] tracking-[0.15px] ${
                       navOpen ? `opacity-100` : `scale-0 opacity-0`
                     } duration-300`}
                   >
-                    {planTokens[currentUserPlan]?.name}
+                    {planTokens[currentTypeOfUser]?.name}
                   </h6>
                 </div>
               }

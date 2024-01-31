@@ -1,4 +1,4 @@
-export type planTypes = 'starter' | 'student' | 'professional' | 'master';
+export type userTypes = 'admin' | 'maincontractor' | 'subcontractor' | 'supplier';
 
 export type routePathTypes =
   | 'projects'
@@ -27,7 +27,7 @@ export interface routesInterface<T> {
 export type routeTypes = routesInterface<routePathTypes>[];
 
 export interface RouteGuardInterface {
-  plan: planTypes;
+  plan: userTypes;
 }
 
 export interface ItitleLinks<T, L> {

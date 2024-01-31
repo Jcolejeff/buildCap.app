@@ -1,6 +1,6 @@
 import useStore from 'store';
 import { useLocation, Navigate, useOutlet } from 'react-router-dom';
-import { planTypes } from 'types';
+import { userTypes } from 'types';
 
 const RouteGuard = () => {
   // const loggedIn = useStore((state) => state.loggedIn);
@@ -15,7 +15,7 @@ const RouteGuard = () => {
       state={
         {
           path: location.pathname,
-        } as { path: string; failedFrom: planTypes }
+        } as { path: string; failedFrom: userTypes }
       }
     />
   ) : (

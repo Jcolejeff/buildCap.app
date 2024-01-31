@@ -1,11 +1,11 @@
 import CONSTANTS from 'constant';
-import Projects from 'pages/app/subContractor/projects';
-import PaymentPlans from 'pages/app/subContractor/payment-plans';
-import UserList from 'pages/app/subContractor/user-list';
-import Profile from 'pages/app/subContractor/user-profile';
-import AccountSettings from 'pages/app/subContractor/account-settings';
+import Projects from 'pages/app/subcontractor/projects';
+import PaymentPlans from 'pages/app/subcontractor/payment-plans';
+import UserList from 'pages/app/subcontractor/user-list';
+import Profile from 'pages/app/subcontractor/user-profile';
+import AccountSettings from 'pages/app/subcontractor/account-settings';
 import SingleAssistantPage from 'pages/inner-pages/single-assistant-page';
-import Dashboard from 'pages/app/subContractor/dashboard';
+import Dashboard from 'pages/app/subcontractor/dashboard';
 import SingleWorkflowPage from 'pages/inner-pages/single-workflow';
 
 import { routeTypes, routesInterface } from 'types';
@@ -44,7 +44,22 @@ const internalRoute: routeTypes = [
   },
 ];
 
-export const mainContractorRoutes: routeTypes = [
+export const maincontractorRoutes: routeTypes = [
+  {
+    element: <Projects />,
+    path: 'projects',
+  },
+
+  {
+    element: <PaymentPlans />,
+    path: 'payment-plans',
+  },
+
+  {
+    element: <UserList />,
+    path: 'users-list',
+  },
+
   {
     element: <Dashboard />,
     path: 'dashboard',
@@ -58,7 +73,22 @@ export const mainContractorRoutes: routeTypes = [
     path: 'settings',
   },
 ];
-export const subContractorRoutes: routeTypes = [
+export const subcontractorRoutes: routeTypes = [
+  {
+    element: <Projects />,
+    path: 'projects',
+  },
+
+  {
+    element: <PaymentPlans />,
+    path: 'payment-plans',
+  },
+
+  {
+    element: <UserList />,
+    path: 'users-list',
+  },
+
   {
     element: <Dashboard />,
     path: 'dashboard',
@@ -74,6 +104,21 @@ export const subContractorRoutes: routeTypes = [
 ];
 
 export const supplierRoutes: routeTypes = [
+  {
+    element: <Projects />,
+    path: 'projects',
+  },
+
+  {
+    element: <PaymentPlans />,
+    path: 'payment-plans',
+  },
+
+  {
+    element: <UserList />,
+    path: 'users-list',
+  },
+
   {
     element: <Dashboard />,
     path: 'dashboard',

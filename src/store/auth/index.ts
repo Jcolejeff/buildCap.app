@@ -1,12 +1,12 @@
 import { StateCreator } from 'zustand';
-import { authDetailsInterface, planTypes } from 'types';
+import { authDetailsInterface, userTypes } from 'types';
 
 export type AuthStateType = {
   authLoading: boolean;
   loggedIn: boolean;
-  plan: planTypes;
+  plan: userTypes;
   setLoggedIn: (arg: boolean) => void;
-  setPlan: (arg: planTypes) => void;
+  setPlan: (arg: userTypes) => void;
   setAuthLoading: (arg: boolean) => void;
   authDetails: authDetailsInterface;
   setAuthDetails: (arg: authDetailsInterface) => void;
@@ -63,7 +63,7 @@ const authStore: StateCreator<AuthStateType, [['zustand/devtools', never]], []> 
   setPageId: (arg) => {
     set({ pageId: arg });
   },
-  plan: 'master',
+  plan: 'supplier',
   setAuthLoading: (arg) => {
     set({ authLoading: arg });
   },

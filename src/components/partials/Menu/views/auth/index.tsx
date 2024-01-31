@@ -2,7 +2,7 @@ import { IDropNavTitles, menuLinks } from 'components/partials/app-nav';
 import { sideNavLinks } from 'components/partials/side-nav';
 import { DropdownMenuSeparator } from 'components/shadcn/dropdown-menu';
 import CONSTANTS from 'constant';
-import usePlan from 'hooks/business-logic/usePlan';
+import useCheckTypeOfUser from 'hooks/business-logic/useCheckTypeOfUser';
 import { useMemo } from 'react';
 import { useNavigate } from 'react-router-dom';
 import useStore from 'store';
@@ -10,13 +10,13 @@ import Icon from 'utils/Icon';
 
 const AuthMenu = ({ close }: { close: () => void }) => {
   const nav = useNavigate();
-  const currentUserPlan = useStore((state) => state.plan);
+  const currentTypeOfUser = useStore((state) => state.plan);
 
   const navigate = (i: string) => {
     close();
     nav(i);
   };
-  const { isAllowed } = usePlan({ currUserPlan: currentUserPlan });
+  const { isAllowed } = useCheckTypeOfUser({ currentTypeOfUser: currentTypeOfUser });
 
   return (
     <div className='flex h-full w-full flex-col gap-[2.125rem]'>
@@ -24,10 +24,10 @@ const AuthMenu = ({ close }: { close: () => void }) => {
         onClick={() => navigate(`/${CONSTANTS.ROUTES['dashboard']}`)}
         className={`group flex cursor-pointer items-center  gap-[0.625rem] rounded-[8px] p-4  transition-all duration-300
          ease-in-out hover:bg-primary-6 hover:text-primary-1
-         ${isAllowed(`student`) ? `text-secondary-9` : `text-secondary-13`}
+         ${isAllowed(`maincontractor`) ? `text-secondary-9` : `text-secondary-13`}
          `}
       >
-        {!isAllowed(`student`) ? (
+        {!isAllowed(`maincontractor`) ? (
           <Icon
             name='padLock'
             svgProp={{

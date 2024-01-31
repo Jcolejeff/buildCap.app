@@ -1,4 +1,4 @@
-import { planTypes, routePathTypes } from 'types';
+import { userTypes, routePathTypes } from 'types';
 
 const ROUTES: Record<routePathTypes, routePathTypes> = {
   '': '',
@@ -20,24 +20,24 @@ const ROUTES: Record<routePathTypes, routePathTypes> = {
   projects: 'projects',
 };
 
-const PLAN_PERMISSIONS: Record<routePathTypes, planTypes> = {
-  '': 'starter',
-  'create-account': 'starter',
-  'cv-profile': 'starter',
-  'payment-plans': 'starter',
-  'users-list': 'starter',
-  dashboard: 'starter',
-  login: 'starter',
-  logout: 'starter',
-  profile: 'starter',
-  settings: 'starter',
-  'new-password': 'starter',
-  'reset-password': 'starter',
-  'forgot-password': 'starter',
-  'verify-email': 'starter',
-  'create-assistant': 'starter',
-  'my-assistants': 'starter',
-  projects: 'master',
+const USER_PAGES_PERMISSIONS: Record<routePathTypes, userTypes> = {
+  '': 'admin',
+  'create-account': 'admin',
+  'cv-profile': 'admin',
+  'payment-plans': 'admin',
+  'users-list': 'admin',
+  dashboard: 'admin',
+  login: 'admin',
+  logout: 'admin',
+  profile: 'admin',
+  settings: 'admin',
+  'new-password': 'admin',
+  'reset-password': 'admin',
+  'forgot-password': 'admin',
+  'verify-email': 'admin',
+  'create-assistant': 'admin',
+  'my-assistants': 'admin',
+  projects: 'supplier',
 };
 
 const TIMBU_KEYS = {
@@ -46,6 +46,6 @@ const TIMBU_KEYS = {
   IMAGE_BASE_URL: 'https://images.timbu.com',
 };
 
-const CONSTANTS = { ROUTES, TIMBU_KEYS, PLAN_PERMISSIONS };
+const CONSTANTS = { ROUTES, TIMBU_KEYS, USER_PAGES_PERMISSIONS };
 
 export default CONSTANTS;

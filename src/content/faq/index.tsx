@@ -30,8 +30,8 @@ export const faqs: Record<any, any[]> = {
             <TableHeader>
               <TableRow>
                 <TableHead className='w-[100px]'></TableHead>
-                <TableHead className='font-bold'>Nollywood Student</TableHead>
-                <TableHead className='font-bold'>Nollywood Professional</TableHead>
+                <TableHead className='font-bold'>Nollywood maincontractor</TableHead>
+                <TableHead className='font-bold'>Nollywood subcontractor</TableHead>
                 <TableHead className='text-end font-bold'>Nollywood Master</TableHead>
               </TableRow>
             </TableHeader>
@@ -87,13 +87,13 @@ export const faqs: Record<any, any[]> = {
     {
       title: `What is Nollywood Filmmaker all about?`,
       body: `It is a community for filmmakers and/or aspiring filmmakers to learn the art
-    and science of filmmaking, interact with other industry professionals and grow
+    and science of filmmaking, interact with other industry subcontractors and grow
     into a successful filmmaker`,
     },
     {
       title: `Can I be a part of the community from outside Lagos/Nigeria?`,
       body: `Yes, you can. We have an Online Interactive Training and General and
-    Professional Support Forums. There are the Live Masterclasses/Workshops that
+    subcontractor Support Forums. There are the Live Masterclasses/Workshops that
     you can plan to attend or access via zoom. We also have a yearly 2-day
     bootcamp but this is only available for Master Subscribers.`,
     },
@@ -136,11 +136,11 @@ export const faqs: Record<any, any[]> = {
     all signed up members.`,
     },
     {
-      title: `What’s the difference between the General Forum and the Professional Support Forum?`,
+      title: `What’s the difference between the General Forum and the subcontractor Support Forum?`,
       body: `This General Forum is open to every signed up member and they can interact
-    with each other while the Professional Support Forum is for strictly Pro and
-    Master subscribers and the professionals answering their questions will be
-    highlighted. Those on the Professional Support Forum also have access to
+    with each other while the subcontractor Support Forum is for strictly Pro and
+    Master subscribers and the subcontractors answering their questions will be
+    highlighted. Those on the subcontractor Support Forum also have access to
     engage pro and master subscribers directly.`,
     },
     {
@@ -155,7 +155,7 @@ export const faqs: Record<any, any[]> = {
           <p>- Firstly, you must be a Masters Subscriber.</p>
           <p>
             The Live Masterclasses/Workshops are regular physical training where master subscribers
-            can meet Niyi Akinmolayan and other professionals. Those that can't attend will have
+            can meet Niyi Akinmolayan and other subcontractors. Those that can't attend will have
             access to watch via zoom.
           </p>
           <p>- The Bootcamps are yearly 2-day events available only for Master Subscribers.</p>
@@ -273,8 +273,8 @@ export const faqs: Record<any, any[]> = {
     },
     {
       title: `As a producer or production company, why should I use your platform to recruit industry
-    professionals?`,
-      body: `Because Nollywood Filmmaker is the hub to find the professionals within the
+    subcontractors?`,
+      body: `Because Nollywood Filmmaker is the hub to find the subcontractors within the
       industry in one place`,
     },
     { title: `Is my detail safe on Nollywood Filmmaker?`, body: `Absolutely.` },
@@ -302,8 +302,8 @@ export const faqs: Record<any, any[]> = {
             <TableHeader>
               <TableRow>
                 <TableHead className='font-bold'>Features</TableHead>
-                <TableHead className='text-start font-bold'>Nollywood Student</TableHead>
-                <TableHead className='text-start font-bold'>Nollywood Professional</TableHead>
+                <TableHead className='text-start font-bold'>Nollywood maincontractor</TableHead>
+                <TableHead className='text-start font-bold'>Nollywood subcontractor</TableHead>
                 <TableHead className='text-start font-bold'>Nollywood Master</TableHead>
               </TableRow>
             </TableHeader>
@@ -314,7 +314,7 @@ export const faqs: Record<any, any[]> = {
                 { feat: `General Forum`, stu: true, pro: true, master: true },
                 { feat: `Download Assets/Templates`, stu: true, pro: true, master: true },
                 { feat: `Online Interactive Training`, stu: false, pro: true, master: true },
-                { feat: `Professional Support Forum`, stu: false, pro: true, master: true },
+                { feat: `subcontractor Support Forum`, stu: false, pro: true, master: true },
                 { feat: `Profile Page with CV`, stu: false, pro: true, master: true },
                 { feat: `Live Masterclasses/Workshops`, stu: false, pro: false, master: true },
                 { feat: `Bootcamps`, stu: false, pro: false, master: true },

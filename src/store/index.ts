@@ -2,9 +2,9 @@ import { create } from 'zustand';
 import { devtools, persist } from 'zustand/middleware';
 import authSlice, { AuthStateType } from './auth';
 import supplierStore, { SupplierStateType } from './supplier';
-import subContractorStore, { subContractorStateType } from './subContractor';
+import subContractorStore, { subContractorStateType } from './subcontractor';
 import adminStore, { adminStateType } from './admin';
-import mainContractorStore, { mainContractorStateType } from './mainContractor';
+import maincontractorStore, { maincontractorStateType } from './maincontractor';
 
 // export type StoreType = StoreStateType;
 
@@ -23,7 +23,7 @@ export type StoreType = AuthStateType &
   SupplierStateType &
   subContractorStateType &
   adminStateType &
-  mainContractorStateType;
+  maincontractorStateType;
 
 const useStore = create<StoreType>()(
   persist(
@@ -32,7 +32,7 @@ const useStore = create<StoreType>()(
       ...supplierStore(set, get, api),
       ...subContractorStore(set, get, api),
       ...adminStore(set, get, api),
-      ...mainContractorStore(set, get, api),
+      ...maincontractorStore(set, get, api),
     })),
     {
       name: 'store',

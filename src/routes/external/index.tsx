@@ -1,5 +1,5 @@
 import MyAssistants from 'pages/external/my-assistants';
-import CreateAssistantPage from 'pages/app/subContractor/dashboard';
+import CreateAssistantPage from 'pages/app/subcontractor/dashboard';
 
 import { routeTypes } from 'types';
 

@@ -1,21 +1,21 @@
 import CONSTANTS from 'constant';
-import usePlan from 'hooks/business-logic/usePlan';
+import useCheckTypeOfUser from 'hooks/business-logic/useCheckTypeOfUser';
 import { useMemo } from 'react';
 import useStore from 'store';
 import { routePathTypes } from 'types';
 
-interface IPlanGuard {
+interface IUserPageGuard {
   page: routePathTypes;
   children: JSX.Element;
 }
 
-const PlanGuard = ({ children, page }: IPlanGuard) => {
-  const currUserPlan = useStore((state) => state?.plan);
-  const { isAllowed } = usePlan({ currUserPlan });
+const UserPageGuard = ({ children, page }: IUserPageGuard) => {
+  const currentTypeOfUser = useStore((state) => state?.plan);
+  const { isAllowed } = useCheckTypeOfUser({ currentTypeOfUser: currentTypeOfUser });
 
   const allowed = useMemo(() => {
-    const pagePlan = CONSTANTS.PLAN_PERMISSIONS[page];
-    return isAllowed(pagePlan);
+    const typeOfPage = CONSTANTS.USER_PAGES_PERMISSIONS[page];
+    return isAllowed(typeOfPage);
   }, [isAllowed, page]);
 
   return allowed ? (
@@ -30,4 +30,4 @@ const PlanGuard = ({ children, page }: IPlanGuard) => {
   );
 };
 
-export default PlanGuard;
+export default UserPageGuard;

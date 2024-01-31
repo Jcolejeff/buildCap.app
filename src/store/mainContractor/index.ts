@@ -1,13 +1,13 @@
 import { StateCreator } from 'zustand';
-import { authDetailsInterface, planTypes } from 'types';
+import { authDetailsInterface, userTypes } from 'types';
 
-export type mainContractorStateType = {
+export type maincontractorStateType = {
   mainContractorName: string;
   setmainContractor: (arg: string) => void;
 };
 
-const mainContractorStore: StateCreator<
-  mainContractorStateType,
+const maincontractorStore: StateCreator<
+  maincontractorStateType,
   [['zustand/devtools', never]],
   []
 > = (set) => ({
@@ -17,4 +17,4 @@ const mainContractorStore: StateCreator<
   },
 });
 
-export default mainContractorStore;
+export default maincontractorStore;
