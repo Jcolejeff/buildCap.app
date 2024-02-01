@@ -118,6 +118,7 @@ import { ReactComponent as UserCheck } from 'assets/svg/userCheck.svg';
 import { ReactComponent as Trash } from 'assets/svg/trash.svg';
 import { ReactComponent as Save } from 'assets/svg/saveIcon.svg';
 import { ReactComponent as Menu } from 'assets/svg/menu.svg';
+import { ReactComponent as Sort } from 'assets/svg/sort.svg';
 
 export type iconTypes =
   | 'filmReel'
@@ -240,7 +241,8 @@ export type iconTypes =
   | 'userCheck'
   | 'trash'
   | 'saveIcon'
-  | 'menu';
+  | 'menu'
+  | 'sort';
 
 interface IconInterface {
   name: iconTypes;
@@ -249,6 +251,7 @@ interface IconInterface {
 
 const Icon = ({ name, svgProp }: IconInterface) => {
   const icons: Record<iconTypes, JSX.Element> = {
+    sort: <Sort {...svgProp} />,
     filmReel: <FilmReel {...svgProp} />,
     externalLink: <ExternalLink {...svgProp} />,
     avatarIcon: <AvatarIcon {...svgProp} />,

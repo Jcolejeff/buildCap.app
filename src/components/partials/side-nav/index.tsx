@@ -180,12 +180,12 @@ const SideNav = () => {
       <div className='no-scrollbar flex flex-grow flex-col gap-[1.125rem] overflow-y-auto overflow-x-hidden'>
         <div className='px-4 '>
           <div
-            onClick={() => navigate(`/mc/${CONSTANTS.ROUTES['dashboard']}`)}
+            onClick={() => navigate(`/mc/${CONSTANTS.ROUTES['overview']}`)}
             className={`flex items-center gap-[0.625rem] px-4 py-[0.625rem] hover:bg-primary-light 
             ${
               isAllowed(`maincontractor`) ? `text-secondary-9` : `text-secondary-13`
             } hover:text-primary-1 ${
-              location?.pathname === `/mc/${CONSTANTS.ROUTES['dashboard']}`
+              location?.pathname === `/mc/${CONSTANTS.ROUTES['overview']}`
                 ? `bg-primary-1 !text-white/95`
                 : ``
             }

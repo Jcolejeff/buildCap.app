@@ -8,21 +8,18 @@ interface IFunkyPagesHero {
 
 const FunkyPagesHero = ({ description, title, customBgClass }: IFunkyPagesHero) => {
   return (
-    <div className='w-full min-h-[10rem] h-full rounded-[16px] relative overflow-hidden'>
-      <div className={`absolute w-full h-full bg-primary-1 ${customBgClass ? customBgClass : ``}`}>
+    <div className='relative   min-h-[4rem] w-full overflow-hidden rounded-[16px]'>
+      <div className={`absolute h-full w-full bg-primary-1 ${customBgClass ? customBgClass : ``}`}>
         <Icon name='funkyPagesHero' />
       </div>
-      <div className='absolute flex justify-center items-center md:items-start w-full h-full px-2'>
-        <div className='w-max h-max mt-8 md:mt-[4.1875rem] z-[1]  flex flex-col items-center'>
-          <h4 className='relative text-white font-[700] text-[32px] leading-[40px] tracking-[0.15px] text-center'>
+      <div className='absolute z-[10] flex h-full w-full items-center  px-2 '>
+        <div className='z-[10] flex  h-max w-max flex-col  items-center px-6 '>
+          <h4 className='relative  text-[14px] font-[600] leading-[21px] tracking-[0.15px]  text-white'>
             {title}
-            <div className='absolute -top-[1.5rem] -left-[1.5rem]'>
+            <div className='absolute -left-[1.5rem] -top-[1.5rem]'>
               <Icon name='funkyPagesTextTop' />
             </div>
           </h4>
-          <p className=' text-primary-10 font-[300] text-[14px] leading-[21px] text-center'>
-            {description}
-          </p>
         </div>
       </div>
     </div>

@@ -19,6 +19,7 @@ const ROUTES: Record<routePathTypes, routePathTypes> = {
   'my-assistants': 'my-assistants',
   projects: 'projects',
   'subcontractor-management': 'subcontractor-management',
+  overview: 'overview',
 };
 
 const USER_PAGES_PERMISSIONS: Record<routePathTypes, userTypes> = {
@@ -40,6 +41,7 @@ const USER_PAGES_PERMISSIONS: Record<routePathTypes, userTypes> = {
   'my-assistants': 'admin',
   projects: 'maincontractor',
   'subcontractor-management': 'maincontractor',
+  overview: 'maincontractor',
 };
 
 const TIMBU_KEYS = {

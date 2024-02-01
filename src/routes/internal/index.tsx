@@ -9,6 +9,7 @@ import Dashboard from 'pages/app/subcontractor/dashboard';
 import SingleWorkflowPage from 'pages/inner-pages/single-workflow';
 
 import { routeTypes, routesInterface } from 'types';
+import MainContractorOverview from 'pages/app/maincontractor/overview';
 
 const internalRoute: routeTypes = [
   // {
@@ -60,8 +61,8 @@ export const maincontractorRoutes: routeTypes = [
   },
 
   {
-    element: <UserList />,
-    path: 'users-list',
+    element: <MainContractorOverview />,
+    path: 'overview',
   },
 
   {

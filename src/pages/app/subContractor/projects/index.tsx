@@ -1,11 +1,9 @@
 import BlogCard from 'components/general/Card';
-import FunkyPagesHero from 'components/general/FunkyPagesHero';
+
 import LinksFilter from 'components/general/LinksFilter';
 import SearchComboBox from 'components/general/SearchComboBox';
 import blogImg from 'assets/image/blogImg.png?format=webp&w=330&h=280&imagetools';
 import dpIcon from 'assets/image/demoDp.jpg?format=webp&imagetools';
-import { LazyLoadImage } from 'react-lazy-load-image-component';
-import { shimmer, toBase64 } from 'utils/general/shimmer';
 import demoAd from 'assets/image/blogImg.png';
 import Icon from 'utils/Icon';
 import {
@@ -24,6 +22,9 @@ import CONSTANTS from 'constant';
 import { useNavigate } from 'react-router-dom';
 import UserPageGuard from 'guards/UserPageGuard';
 import useStore, { StoreType } from 'store';
+import FunkyPagesHero from 'components/general/FunkyPagesHero';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import { shimmer, toBase64 } from 'utils/general/shimmer';
 
 const CustomizeYourAvatarPage = () => {
   const navigate = useNavigate();
