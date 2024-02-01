@@ -20,7 +20,7 @@ import BtnLoader from 'components/Hocs/BtnLoader';
 import { authDetailsInterface } from 'types';
 import useStore from 'store';
 import API from 'services';
-import MainUserAddInfoModal from 'components/modal/MainUserInfoModal';
+import UserRegistrationModal from 'components/modal/UserRegisterModal';
 
 const Login = () => {
   const navigate = useNavigate();
@@ -110,7 +110,7 @@ const Login = () => {
         </div>
       </div>
       <div className='mx-auto w-1/2 bg-white px-4 md:px-[3rem]'>
-        <MainUserAddInfoModal
+        <UserRegistrationModal
           title='Add Categories'
           trigger={
             <button className=' group flex items-center  justify-center gap-2 rounded-[10px] border border-primary-1 bg-transparent px-2 py-1 transition-all duration-300 ease-in-out hover:opacity-90 md:px-3'>
