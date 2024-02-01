@@ -166,15 +166,7 @@ const SideNav = () => {
             >
               buildCAP
             </h4>
-            {/* <Icon name='nfmLogo' svgProp={{ className: 'w-[68px]  md:w-[100px]' }} /> */}
           </div>
-          {/* <h4
-            className={`text-[16px] font-[700] leading-[20px] tracking-[0.15px] text-primary-8 md:text-[19px] md:font-[700] md:leading-[24px] ${
-              navOpen ? `opacity-100` : `scale-0 opacity-0`
-            }  duration-300`}
-          >
-            App Assistant
-          </h4> */}
         </div>
       </div>
       <div className='no-scrollbar flex flex-grow flex-col gap-[1.125rem] overflow-y-auto overflow-x-hidden'>
@@ -192,7 +184,7 @@ const SideNav = () => {
             group cursor-pointer rounded-[6px] transition duration-300 ease-in-out`}
           >
             <div className='flex items-center'>
-              {!isAllowed(`admin`) ? (
+              {!isAllowed(`maincontractor`) ? (
                 <Icon
                   svgProp={{
                     width: 22.75,
@@ -220,14 +212,16 @@ const SideNav = () => {
           </div>
         </div>
         <div
-          className={`relative h-[1px] w-full bg-gray-200   ${
+          className={`relative my-10 h-[1px] w-full bg-gray-200   ${
             navOpen ? `opacity-100` : `opacity-0`
           } transition-opacity duration-300`}
-        ></div>
-        <div className='absolute left-0 top-1/3 w-4 border border-action-disabledBg' />
-        <div className='px-8 text-[12px] font-[400] leading-[14px] tracking-[0.4px] text-gray-400'>
-          {`Dashboards`?.toUpperCase()}
+        >
+          <div className='absolute left-0 top-1/3 mb-6 w-4 border border-action-disabledBg' />
+          <div className='mt-6 px-8 text-[12px] font-[400] leading-[14px] tracking-[0.4px] text-gray-400'>
+            {`Dashboards`?.toUpperCase()}
+          </div>
         </div>
+
         <div className='mb-[1.125rem] flex flex-col'>
           {sideNavLinks['discussions']
             ?.filter((item, index) => isAllowed(item?.userType))
