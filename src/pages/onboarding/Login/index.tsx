@@ -20,6 +20,7 @@ import BtnLoader from 'components/Hocs/BtnLoader';
 import { authDetailsInterface } from 'types';
 import useStore from 'store';
 import API from 'services';
+import MainUserAddInfoModal from 'components/modal/MainUserInfoModal';
 
 const Login = () => {
   const navigate = useNavigate();
@@ -109,6 +110,23 @@ const Login = () => {
         </div>
       </div>
       <div className='mx-auto w-1/2 bg-white px-4 md:px-[3rem]'>
+        <MainUserAddInfoModal
+          title='Add Categories'
+          trigger={
+            <button className=' group flex items-center  justify-center gap-2 rounded-[10px] border border-primary-1 bg-transparent px-2 py-1 transition-all duration-300 ease-in-out hover:opacity-90 md:px-3'>
+              <span className='text-xs font-[400]  leading-[24px] tracking-[0.4px]'>
+                Add Categories
+              </span>
+              <Icon
+                name='plusIcon'
+                svgProp={{
+                  className:
+                    'text-primary-1  w-4 font-light cursor-pointer hover:opacity-95 transition-opacity duration-300 ease-in-out active:opacity-100',
+                }}
+              />
+            </button>
+          }
+        />
         <div className='mx-auto flex w-full flex-col items-start justify-center'>
           <div
             className='mb-[2.125rem] flex   cursor-pointer
